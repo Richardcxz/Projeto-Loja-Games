@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Projeto_Loja_Games
 {
-    public partial class Cadastro : Form
+    public partial class Action : Form
     {
-        public Cadastro()
+        public Action()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var menucad = new Form1log();
-            menucad.Show();
         }
     }
 }

@@ -39,6 +39,7 @@ namespace Projeto_Loja_Games
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,6 +87,7 @@ namespace Projeto_Loja_Games
             this.pictureBox4.Size = new System.Drawing.Size(144, 307);
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -95,6 +97,7 @@ namespace Projeto_Loja_Games
             this.pictureBox3.Size = new System.Drawing.Size(144, 307);
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -104,6 +107,7 @@ namespace Projeto_Loja_Games
             this.pictureBox2.Size = new System.Drawing.Size(144, 307);
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -113,6 +117,7 @@ namespace Projeto_Loja_Games
             this.pictureBox1.Size = new System.Drawing.Size(144, 307);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -143,12 +148,24 @@ namespace Projeto_Loja_Games
             this.button2.Text = "Menu de alterações";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Light", 10F);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(631, 409);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 23);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "TERROR";
+            // 
             // Form1adm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -182,5 +199,6 @@ namespace Projeto_Loja_Games
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
     }
 }

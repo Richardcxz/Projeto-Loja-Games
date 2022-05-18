@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action.Designer.cs">
+      <DependentUpon>Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aventura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aventura.Designer.cs">
+      <DependentUpon>aventura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpg.Designer.cs">
+      <DependentUpon>rpg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="terror.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="terror.Designer.cs">
+      <DependentUpon>terror.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Action.resx">
+      <DependentUpon>Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aventura.resx">
+      <DependentUpon>aventura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +132,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rpg.resx">
+      <DependentUpon>rpg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terror.resx">
+      <DependentUpon>terror.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

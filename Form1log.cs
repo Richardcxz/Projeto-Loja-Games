@@ -17,5 +17,33 @@ namespace Projeto_Loja_Games
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var ac = new Action();
+            ac.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var rpg = new rpg();
+            rpg.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var av = new aventura();
+            av.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var ter = new terror();
+            ter.Show();
+        }
     }
 }
