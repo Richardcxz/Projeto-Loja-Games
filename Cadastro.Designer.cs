@@ -86,9 +86,9 @@ namespace Projeto_Loja_Games
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 259);
+            this.button1.Location = new System.Drawing.Point(178, 261);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
+            this.button1.Size = new System.Drawing.Size(115, 23);
             this.button1.TabIndex = 8;
             this.button1.Text = "CADASTRAR";
             this.button1.UseVisualStyleBackColor = true;

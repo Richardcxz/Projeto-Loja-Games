@@ -20,7 +20,7 @@ namespace Projeto_Loja_Games
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var menucad = new Form1();
+            var menucad = new Form1log();
             menucad.Show();
         }
     }
