@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Projeto_Loja_Games
 {
     public partial class Cadastro : Form
     {
+        MySqlConnection conexao;
         public Cadastro()
         {
             InitializeComponent();
@@ -20,9 +22,31 @@ namespace Projeto_Loja_Games
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var menucad = new Form1log();
-            menucad.Show();
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
+                
+                string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
+
+                conexao = new MySqlConnection(data_source);
+
+                int idcad = 2;
+
+                string sql = "INSERT INTO cad_cliente (id,nome,senha) " +
+                    "VALUES ('" + idcad + "','" +textBox1.Text + "','" + textBox2.Text + "') "; 
+
+                MySqlCommand cmnd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                cmnd.ExecuteReader();
+
+                MessageBox.Show("Usuário Cadastrado.");
+
+                this.Hide();
+                var menucad = new Form1log();
+                menucad.Show();
+
+                conexao.Close();
+            }
         }
     }
 }

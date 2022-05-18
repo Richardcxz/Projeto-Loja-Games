@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Projeto_Loja_Games
 {
     public partial class Login : Form
     {
+        MySqlConnection conexao;
         public Login()
         {
             InitializeComponent();
@@ -23,18 +25,37 @@ namespace Projeto_Loja_Games
         public int txt2 = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            if(adm1 == 1 && adm2 == 1)
+            if (adm1 == 1 && adm2 == 1)
             {
                 MessageBox.Show("Admin detectado.");
                 this.Hide();
                 var menuadm = new Form1adm();
                 menuadm.Show();
             }
-            else if(txt1 == 1 && txt2 == 1)
+            else if (txt1 == 1 && txt2 == 1)
             {
-                this.Hide();
-                var menulog = new Form1log();
-                menulog.Show();
+                string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
+
+                conexao = new MySqlConnection(data_source);
+
+                string sql = $"SELECT * FROM cad_cliente WHERE nome='{textBox1.Text}' AND senha='{textBox2.Text}';";
+
+                MySqlCommand cmnd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                MySqlDataReader reader = cmnd.ExecuteReader();
+
+                if (reader.Read()) {
+                    reader.Close();
+                    conexao.Close();
+                    MessageBox.Show("Login Realizado.");
+                    this.Hide();
+                    var menulog = new Form1log();
+                    menulog.Show();
+                }
+                else {
+                    MessageBox.Show("Usuário e/ou senha incorretas!");
+                }
             }
             else
             {
