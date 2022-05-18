@@ -29,5 +29,12 @@ namespace Projeto_Loja_Games
             var login = new Login();
             login.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var cad = new Cadastro();
+            cad.Show();
+        }
     }
 }

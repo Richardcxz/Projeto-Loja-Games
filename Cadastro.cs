@@ -16,5 +16,12 @@ namespace Projeto_Loja_Games
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var menucad = new Form1();
+            menucad.Show();
+        }
     }
 }

@@ -83,6 +83,7 @@ namespace Projeto_Loja_Games
             this.button2.TabIndex = 4;
             this.button2.Text = "CADASTRO";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
