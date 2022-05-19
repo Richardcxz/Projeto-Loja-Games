@@ -45,5 +45,12 @@ namespace Projeto_Loja_Games
             var ter = new terror();
             ter.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var altadm = new alteracoesadm();
+            altadm.Show();
+        }
     }
 }

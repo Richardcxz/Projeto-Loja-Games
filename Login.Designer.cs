@@ -40,7 +40,7 @@ namespace Projeto_Loja_Games
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(119, 192);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace Projeto_Loja_Games
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(111, 89);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
@@ -73,7 +73,7 @@ namespace Projeto_Loja_Games
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(111, 153);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.MaxLength = 10;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -109,7 +109,7 @@ namespace Projeto_Loja_Games
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(295, 225);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -117,7 +117,7 @@ namespace Projeto_Loja_Games
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
