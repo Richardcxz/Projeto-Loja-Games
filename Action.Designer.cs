@@ -45,6 +45,7 @@ namespace Projeto_Loja_Games
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,7 +60,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(38, 86);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 173);
             this.pictureBox1.TabIndex = 0;
@@ -69,7 +70,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Location = new System.Drawing.Point(252, 86);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(165, 173);
             this.pictureBox2.TabIndex = 1;
@@ -79,7 +80,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Location = new System.Drawing.Point(467, 86);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(165, 173);
             this.pictureBox3.TabIndex = 2;
@@ -89,7 +90,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Location = new System.Drawing.Point(681, 86);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(165, 173);
             this.pictureBox4.TabIndex = 3;
@@ -99,7 +100,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.Location = new System.Drawing.Point(681, 311);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(165, 173);
             this.pictureBox5.TabIndex = 7;
@@ -109,7 +110,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.Location = new System.Drawing.Point(467, 311);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(165, 173);
             this.pictureBox6.TabIndex = 6;
@@ -119,7 +120,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.White;
             this.pictureBox7.Location = new System.Drawing.Point(252, 311);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(165, 173);
             this.pictureBox7.TabIndex = 5;
@@ -129,7 +130,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.White;
             this.pictureBox8.Location = new System.Drawing.Point(38, 311);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(165, 173);
             this.pictureBox8.TabIndex = 4;
@@ -231,12 +232,23 @@ namespace Projeto_Loja_Games
             this.label8.TabIndex = 14;
             this.label8.Text = "JOGO 5";
             // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Location = new System.Drawing.Point(38, 12);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 18;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
             // Action
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(882, 518);
+            this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -253,7 +265,7 @@ namespace Projeto_Loja_Games
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Action";
             this.Text = "Action";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -287,5 +299,6 @@ namespace Projeto_Loja_Games
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }
