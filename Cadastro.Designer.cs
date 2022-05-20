@@ -35,6 +35,7 @@ namespace Projeto_Loja_Games
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -69,7 +70,7 @@ namespace Projeto_Loja_Games
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(76, 20);
-            this.textBox2.TabIndex = 12;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
@@ -78,7 +79,7 @@ namespace Projeto_Loja_Games
             this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 13;
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -94,14 +95,24 @@ namespace Projeto_Loja_Games
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(134, 212);
+            this.button1.Location = new System.Drawing.Point(86, 214);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 19);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 3;
             this.button1.Text = "CADASTRAR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Location = new System.Drawing.Point(186, 214);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 12;
+            this.btn_voltar.Text = "VOLTAR";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // Cadastro
             // 
@@ -109,6 +120,7 @@ namespace Projeto_Loja_Games
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(350, 279);
+            this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
@@ -131,5 +143,6 @@ namespace Projeto_Loja_Games
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }

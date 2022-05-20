@@ -23,5 +23,10 @@ namespace Projeto_Loja_Games
             var init = new Form1();
             init.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

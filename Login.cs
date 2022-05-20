@@ -88,5 +88,12 @@ namespace Projeto_Loja_Games
                 txt2 = 1;
             }
         }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var init = new Form1();
+            init.Show();
+        }
     }
 }
