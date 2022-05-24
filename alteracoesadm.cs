@@ -24,5 +24,26 @@ namespace Projeto_Loja_Games
             var ac = new dbacao();
             ac.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var ac = new dbrpg();
+            ac.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var ac = new dbaventura();
+            ac.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var ac = new dbterror();
+            ac.Show();
+        }
     }
 }

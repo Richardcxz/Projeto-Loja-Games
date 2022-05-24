@@ -31,8 +31,8 @@ namespace Projeto_Loja_Games
 
                 int idcad = 2;
 
-                string sql = "INSERT INTO cad_cliente (id,nome,senha) " +
-                    "VALUES ('" + idcad + "','" +textBox1.Text + "','" + textBox2.Text + "') "; 
+                string sql = "INSERT INTO cad_cliente (nome,senha) " +
+                    "VALUES ('" +textBox1.Text + "','" + textBox2.Text + "') "; 
 
                 MySqlCommand cmnd = new MySqlCommand(sql, conexao);
 

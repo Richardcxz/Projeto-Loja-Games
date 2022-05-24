@@ -1,4 +1,5 @@
 ﻿
+
 namespace Projeto_Loja_Games
 {
     partial class Form1

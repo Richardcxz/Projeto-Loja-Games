@@ -11,25 +11,33 @@ using MySql.Data.MySqlClient;
 
 namespace Projeto_Loja_Games
 {
-    public partial class dbacao : Form
+    public partial class dbrpg : Form
     {
         MySqlConnection conexao;
-        public dbacao()
+        public dbrpg()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var alt = new alteracoesadm();
+            alt.Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "") {
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
 
                 string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
-                
+
                 conexao = new MySqlConnection(data_source);
 
-                string sql = "INSERT INTO cad_acao (nome,desc) " + 
-                    "VALUES ('" +textBox1.Text + "','" + textBox2.Text + "') ";
+                string sql = "INSERT INTO cad_acao (nome,desc) " +
+                    "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "') ";
 
                 MySqlCommand cmnd = new MySqlCommand(sql, conexao);
 
@@ -39,21 +47,11 @@ namespace Projeto_Loja_Games
                 MessageBox.Show("Jogo inserido com sucesso!");
 
                 conexao.Close();
-        }
+            }
             else
             {
                 MessageBox.Show("Algum dos campos está vazio!");
             }
-
-
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var alt = new alteracoesadm();
-            alt.Show();
         }
     }
 }

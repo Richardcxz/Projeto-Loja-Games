@@ -91,6 +91,24 @@
     <Compile Include="dbacao.Designer.cs">
       <DependentUpon>dbacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbaventura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbaventura.Designer.cs">
+      <DependentUpon>dbaventura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbrpg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbrpg.Designer.cs">
+      <DependentUpon>dbrpg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbterror.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbterror.Designer.cs">
+      <DependentUpon>dbterror.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +161,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dbacao.resx">
       <DependentUpon>dbacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbaventura.resx">
+      <DependentUpon>dbaventura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbrpg.resx">
+      <DependentUpon>dbrpg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbterror.resx">
+      <DependentUpon>dbterror.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
