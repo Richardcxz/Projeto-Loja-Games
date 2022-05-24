@@ -39,29 +39,33 @@ namespace Projeto_Loja_Games
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Projeto_Loja_Games.Program.lista = 1;
             this.Hide();
-            var ac = new Action();
+            var ac = new ListaJogos();
             ac.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            Projeto_Loja_Games.Program.lista = 2;
             this.Hide();
-            var rpg = new rpg();
+            var rpg = new ListaJogos();
             rpg.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            Projeto_Loja_Games.Program.lista = 3;
             this.Hide();
-            var av = new aventura();
+            var av = new ListaJogos();
             av.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            Projeto_Loja_Games.Program.lista = 4;
             this.Hide();
-            var ter = new terror();
+            var ter = new ListaJogos();
             ter.Show();
         }
     }
