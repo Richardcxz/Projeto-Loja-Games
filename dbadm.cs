@@ -47,13 +47,13 @@ namespace Projeto_Loja_Games
                 
                 conexao10 = new MySqlConnection(data_source);
 
-                string sql = "INSERT INTO cad_acao (nome, desc) " + 
+                string sql = "INSERT INTO cad_acao (nomejogo, descricao) " + 
                     "VALUES ('" +textBox1.Text + "','" + textBox2.Text + "') ";
 
                 comando = new MySqlCommand(sql, conexao10);
 
                 conexao10.Open();
-                comando.ExecuteNonQuery();
+                comando.ExecuteReader();
 
                 MessageBox.Show("Jogo inserido com sucesso!");
 
