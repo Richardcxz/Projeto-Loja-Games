@@ -49,5 +49,12 @@ namespace Projeto_Loja_Games
             var ac = new ListaJogos();
             ac.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var mn = new Form1();
+            mn.Show();
+        }
     }
 }

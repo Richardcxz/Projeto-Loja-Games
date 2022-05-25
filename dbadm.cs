@@ -13,8 +13,9 @@ namespace Projeto_Loja_Games
 {
     public partial class dbadm : Form
     {
-        MySqlConnection conexao;
+        MySqlConnection conexao10;
         MySqlDataAdapter da;
+        MySqlCommand comando;
         public dbadm()
         {
             InitializeComponent();
@@ -44,19 +45,19 @@ namespace Projeto_Loja_Games
 
                 string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
                 
-                conexao = new MySqlConnection(data_source);
+                conexao10 = new MySqlConnection(data_source);
 
-                string sql = "INSERT INTO cad_acao (nome,desc) " + 
+                string sql = "INSERT INTO cad_acao (nome, desc) " + 
                     "VALUES ('" +textBox1.Text + "','" + textBox2.Text + "') ";
 
-                MySqlCommand cmnd = new MySqlCommand(sql, conexao);
+                comando = new MySqlCommand(sql, conexao10);
 
-                conexao.Open();
-                cmnd.ExecuteReader();
+                conexao10.Open();
+                comando.ExecuteNonQuery();
 
                 MessageBox.Show("Jogo inserido com sucesso!");
 
-                conexao.Close();
+                conexao10.Close();
         }
             else
             {
@@ -78,11 +79,11 @@ namespace Projeto_Loja_Games
         {
             string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
 
-            conexao = new MySqlConnection(data_source);
+            conexao10 = new MySqlConnection(data_source);
 
             string sql = "SELECT * FROM cad_cliente";
 
-            da = new MySqlDataAdapter(sql,conexao);
+            da = new MySqlDataAdapter(sql,conexao10);
 
             DataTable DT = new DataTable();
 

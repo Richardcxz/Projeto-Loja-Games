@@ -56,5 +56,12 @@ namespace Projeto_Loja_Games
             var altadm = new alteracoesadm();
             altadm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var mn = new Form1();
+            mn.Show();
+        }
     }
 }
