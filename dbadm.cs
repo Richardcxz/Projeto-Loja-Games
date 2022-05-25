@@ -17,6 +17,7 @@ namespace Projeto_Loja_Games
         MySqlDataAdapter da;
         MySqlCommand comando;
         public string sql;
+        DataTable DT;
         public dbadm()
         {
             InitializeComponent();
@@ -25,23 +26,6 @@ namespace Projeto_Loja_Games
             string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
 
             conexao10 = new MySqlConnection(data_source);
-
-            if (Projeto_Loja_Games.Program.dboption == 1)
-            {
-                MessageBox.Show("variável vale 1");
-            }
-            else if (Projeto_Loja_Games.Program.dboption == 2)
-            {
-                MessageBox.Show("variável vale 2");
-            }
-            else if (Projeto_Loja_Games.Program.dboption == 3)
-            {
-                MessageBox.Show("variável vale 3");
-            }
-            if (Projeto_Loja_Games.Program.dboption == 4)
-            {
-                MessageBox.Show("variável vale 4");
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -121,20 +105,89 @@ namespace Projeto_Loja_Games
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
+            switch (Projeto_Loja_Games.Program.dboption) { 
 
-            conexao10 = new MySqlConnection(data_source);
-
-            string sql = "SELECT * FROM cad_cliente";
-
+            case 1:
+            sql = "SELECT * FROM cad_acao";
             da = new MySqlDataAdapter(sql,conexao10);
-
-            DataTable DT = new DataTable();
-
+            DT = new DataTable();
             da.Fill(DT);
-
             dataGridView1.DataSource = DT;
 
+                break;
+            case 2:
+            sql = "SELECT * FROM cad_rpg";
+            da = new MySqlDataAdapter(sql, conexao10);
+            DT = new DataTable();
+            da.Fill(DT);
+            dataGridView1.DataSource = DT;
+
+                break;
+            case 3:
+            sql = "SELECT * FROM cad_aventura";
+            da = new MySqlDataAdapter(sql, conexao10);
+            DT = new DataTable();
+            da.Fill(DT);
+            dataGridView1.DataSource = DT;
+
+                break;
+            case 4:
+            sql = "SELECT * FROM cad_terror";
+            da = new MySqlDataAdapter(sql, conexao10);
+            DT = new DataTable();
+            da.Fill(DT);
+            dataGridView1.DataSource = DT;
+
+                break;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            switch (Projeto_Loja_Games.Program.dboption)
+            {
+
+            case 1:
+            sql = "DELETE FROM cad_acao WHERE nome_acao = @nomeac";
+            comando = new MySqlCommand(sql, conexao10);
+            comando.Parameters.AddWithValue("@nomeac", textBox1.Text);
+            conexao10.Open();
+            comando.ExecuteReader();
+            MessageBox.Show("Jogo de ação deletado com sucesso!");
+            conexao10.Close();
+            break;
+
+            case 2:
+            sql = "DELETE FROM cad_rpg WHERE nome_rpg = @nomerpg";
+            comando = new MySqlCommand(sql, conexao10);
+            comando.Parameters.AddWithValue("@nomerpg", textBox1.Text);
+            conexao10.Open();
+            comando.ExecuteReader();
+            MessageBox.Show("Jogo de rpg deletado com sucesso!");
+            conexao10.Close();
+            break;
+
+            case 3:
+            sql = "DELETE FROM cad_aventura WHERE nome_aventura = @nomeaventura";
+            comando = new MySqlCommand(sql, conexao10);
+            comando.Parameters.AddWithValue("@nomeaventura", textBox1.Text);
+            conexao10.Open();
+            comando.ExecuteReader();
+            MessageBox.Show("Jogo de aventura deletado com sucesso!");
+            conexao10.Close();
+            break;
+
+            case 4:
+            sql = "DELETE FROM cad_terror WHERE nome_terror = @nometerror";
+            comando = new MySqlCommand(sql, conexao10);
+            comando.Parameters.AddWithValue("@nometerror", textBox1.Text);
+            conexao10.Open();
+            comando.ExecuteReader();
+            MessageBox.Show("Jogo de terror deletado com sucesso!");
+            conexao10.Close();
+            break;
+
+            }
         }
     }
 }
