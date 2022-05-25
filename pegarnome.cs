@@ -15,5 +15,11 @@ namespace Projeto_Loja_Games
         
         public string sql;
         string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
+
+            public string resultnome(string x)
+            {
+            return x;
+            }
+
+        }
     }
-}

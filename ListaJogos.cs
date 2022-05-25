@@ -24,8 +24,29 @@ namespace Projeto_Loja_Games
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
+            conexao = new MySqlConnection(data_source); 
+            conexao.Open();
+            sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 1";
+            MySqlCommand cmnd = new MySqlCommand(sql, conexao);
+            MySqlDataReader pegarnome = cmnd.ExecuteReader();
+            pegarnome.Read();
+            string nomejogo = pegarnome["nome_aventura"].ToString();
+            conexao.Close();
 
-            conexao = new MySqlConnection(data_source);
+            switch (nomejogo){
+                case "Detroit":
+                    pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
+                    break;
+                case "detroit":
+                    pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
+                    break;
+            }
+
+
+
+
+
+
 
             switch (Projeto_Loja_Games.Program.lista)
             {
@@ -36,16 +57,16 @@ namespace Projeto_Loja_Games
                     pictureBox1.ImageLocation = @"C:\imgproj\639492.jpg";
                     break;
                 case 2:
-                    label9.Text = "JOGOS DE RPG";
+
 
                     break;
                 case 3:
                     label9.Text = "JOGOS DE AVENTURA";
 
                     sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 1;";
-                    MySqlCommand cmnd = new MySqlCommand(sql, conexao);
+                    cmnd = new MySqlCommand(sql, conexao);
                     conexao.Open();
-                    MySqlDataReader pegarnome = cmnd.ExecuteReader();
+                    pegarnome = cmnd.ExecuteReader();
                     pegarnome.Read();
                     string jogo1 = pegarnome["nome_aventura"].ToString();
                     label1.Text = jogo1;
