@@ -13,10 +13,20 @@ namespace Projeto_Loja_Games
 {
     public partial class ListaJogos : Form
     {
+        MySqlConnection conexao;
+        MySqlConnection conexao2;
+        MySqlDataReader dr;
+        public string sql;
+        string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
+        
         public ListaJogos()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+
+
+            conexao = new MySqlConnection(data_source);
+
             switch (Projeto_Loja_Games.Program.lista)
             {
                 //colocar ifs dependendo do nome do jogo, para puxar da pasta as imagens correspondentes
@@ -31,6 +41,18 @@ namespace Projeto_Loja_Games
                     break;
                 case 3:
                     label9.Text = "JOGOS DE AVENTURA";
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 1;";
+                    MySqlCommand cmnd = new MySqlCommand(sql, conexao);
+                    conexao.Open();
+                    MySqlDataReader pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogo1 = pegarnome["nome_aventura"].ToString();
+                    label1.Text = jogo1;
+
+
+                    conexao.Close();
+
 
                     break;
                 case 4:

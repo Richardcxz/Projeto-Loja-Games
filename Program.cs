@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Projeto_Loja_Games
 {
     static class Program
     {
+
         public static int dboption = 0;
         public static int iduser = 0;
         public static int lista = 0;
