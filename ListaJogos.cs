@@ -26,6 +26,7 @@ namespace Projeto_Loja_Games
 
             conexao = new MySqlConnection(data_source); 
             conexao.Open();
+
             sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 1";
             MySqlCommand cmnd = new MySqlCommand(sql, conexao);
             MySqlDataReader pegarnome = cmnd.ExecuteReader();
@@ -33,13 +34,16 @@ namespace Projeto_Loja_Games
             string nomejogo = pegarnome["nome_aventura"].ToString();
             conexao.Close();
 
-            switch (nomejogo){
-                case "Detroit":
-                    pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
-                    break;
-                case "detroit":
-                    pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
-                    break;
+            if(Projeto_Loja_Games.Program.lista == 3) {
+                switch (nomejogo)
+                {
+                    case "Detroit":
+                        pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
+                        break;
+                    case "detroit":
+                        pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
+                        break;
+                }
             }
 
 
@@ -54,7 +58,6 @@ namespace Projeto_Loja_Games
                 //e caso não tenha o jogo na base de imagens, deixar uma foto padrão para os que não têm
                 case 1:
                     label9.Text = "JOGOS DE AÇÃO";
-                    pictureBox1.ImageLocation = @"C:\imgproj\639492.jpg";
                     break;
                 case 2:
 
