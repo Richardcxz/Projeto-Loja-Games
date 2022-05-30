@@ -16,7 +16,16 @@ namespace Projeto_Loja_Games
         MySqlConnection conexao10;
         MySqlDataAdapter da;
         MySqlCommand comando;
+        MySqlDataReader pegarlastid;
+        MySqlDataReader pegarlastid2;
+        MySqlDataReader pegarlastid3;
+        MySqlDataReader pegarlastid4;
         public string sql;
+        public int idcheck;
+        public int sqlidi1;
+        public int sqlidi2;
+        public int sqlidi3;
+        public int sqlidi4;
         DataTable DT;
         public dbadm()
         {
@@ -31,61 +40,150 @@ namespace Projeto_Loja_Games
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "") {
+
+                conexao10.Close();
+
                 switch (Projeto_Loja_Games.Program.dboption) {
                     case 1:
-                        sql = "INSERT INTO cad_acao (nome_acao, descricao_acao, ano_acao, avaliacao_acao) " +
-                            "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
 
-                        comando = new MySqlCommand(sql, conexao10);
+                        if (idcheck == 0)
+                        {
+                            conexao10.Open();
 
-                        conexao10.Open();
-                        comando.ExecuteReader();
+                            string sqlid1 = "SELECT ID FROM cad_acao where ID =(Select Max(ID) from cad_acao);";
+                            MySqlCommand cmnd1 = new MySqlCommand(sqlid1, conexao10);
+                            pegarlastid = cmnd1.ExecuteReader();
+                            pegarlastid.Read();
+                            string strlastid1 = pegarlastid["ID"].ToString();
+                            sqlidi1 = Int32.Parse(strlastid1);
 
-                        MessageBox.Show("Jogo de ação inserido com sucesso!");
+                            conexao10.Close();
+                        }
 
-                        conexao10.Close();
+                        if (sqlidi1 < 8)
+                        {
+                            sql = "INSERT INTO cad_acao (id, nome_acao, descricao_acao, ano_acao, avaliacao_acao) " +
+                                "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
+
+                            comando = new MySqlCommand(sql, conexao10);
+
+                            conexao10.Open();
+                            comando.ExecuteReader();
+
+                            MessageBox.Show("Jogo de ação inserido com sucesso!");
+
+                            conexao10.Close();
+                        }
+                        else if (sqlidi1 == 8)
+                        {
+                            MessageBox.Show("A tabela já possui 8 jogos da categoria!");
+                        }
                         break;
 
                     case 2:
-                        sql = "INSERT INTO cad_rpg (nome_rpg, descricao_rpg, ano_rpg, avaliacao_rpg) " +
-                            "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
 
-                        comando = new MySqlCommand(sql, conexao10);
-
+                        if (idcheck == 0) {
                         conexao10.Open();
-                        comando.ExecuteReader();
 
-                        MessageBox.Show("Jogo de rpg inserido com sucesso!");
+                        string sqlid2 = "SELECT ID FROM cad_rpg where ID =(Select Max(ID) from cad_rpg);";
+                        MySqlCommand cmnd2 = new MySqlCommand(sqlid2, conexao10);
+                        pegarlastid2 = cmnd2.ExecuteReader();
+                        pegarlastid2.Read();
+                        string strlastid2 = pegarlastid2["ID"].ToString();
+                        sqlidi2 = Int32.Parse(strlastid2);
 
                         conexao10.Close();
+                        }
+
+                        if (sqlidi2 < 8)
+                        {
+                            sql = "INSERT INTO cad_rpg (id, nome_rpg, descricao_rpg, ano_rpg, avaliacao_rpg) " +
+                                "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
+
+                            comando = new MySqlCommand(sql, conexao10);
+
+                            conexao10.Open();
+                            comando.ExecuteReader();
+
+                            MessageBox.Show("Jogo de rpg inserido com sucesso!");
+
+                            conexao10.Close();
+                        }
+                        else if (sqlidi2 == 8)
+                        {
+                            MessageBox.Show("A tabela já possui 8 jogos da categoria!");
+                        }
                         break;
 
                     case 3:
-                        sql = "INSERT INTO cad_aventura (nome_aventura, descricao_aventura, ano_aventura, avaliacao_aventura) " +
-                            "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
 
-                        comando = new MySqlCommand(sql, conexao10);
+                        if (idcheck == 0)
+                        {
+                            conexao10.Open();
 
-                        conexao10.Open();
-                        comando.ExecuteReader();
+                            string sqlid3 = "SELECT ID FROM cad_aventura where ID =(Select Max(ID) from cad_aventura);";
+                            MySqlCommand cmnd3 = new MySqlCommand(sqlid3, conexao10);
+                            pegarlastid3 = cmnd3.ExecuteReader();
+                            pegarlastid3.Read();
+                            string strlastid3 = pegarlastid3["ID"].ToString();
+                            sqlidi3 = Int32.Parse(strlastid3);
 
-                        MessageBox.Show("Jogo de aventura inserido com sucesso!");
+                            conexao10.Close();
+                        }
 
-                        conexao10.Close();
+                        if (sqlidi3 < 8)
+                        {
+                            sql = "INSERT INTO cad_aventura (id, nome_aventura, descricao_aventura, ano_aventura, avaliacao_aventura) " +
+                            "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
+
+                            comando = new MySqlCommand(sql, conexao10);
+
+                            conexao10.Open();
+                            comando.ExecuteReader();
+
+                            MessageBox.Show("Jogo de aventura inserido com sucesso!");
+
+                            conexao10.Close();
+                        }
+                        else if (sqlidi3 == 8)
+                        {
+                            MessageBox.Show("A tabela já possui 8 jogos da categoria!");
+                        }
                         break;
 
                     case 4:
-                        sql = "INSERT INTO cad_terror (nome_terror, descricao_terror, ano_terror, avaliacao_terror) " +
-                            "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
 
-                        comando = new MySqlCommand(sql, conexao10);
+                        if (idcheck == 0)
+                        {
+                            conexao10.Open();
 
-                        conexao10.Open();
-                        comando.ExecuteReader();
+                            string sqlid4 = "SELECT ID FROM cad_terror where ID =(Select Max(ID) from cad_terror);";
+                            MySqlCommand cmnd4 = new MySqlCommand(sqlid4, conexao10);
+                            pegarlastid4 = cmnd4.ExecuteReader();
+                            pegarlastid4.Read();
+                            string strlastid4 = pegarlastid4["ID"].ToString();
+                            sqlidi4 = Int32.Parse(strlastid4);
 
-                        MessageBox.Show("Jogo de terror inserido com sucesso!");
+                            conexao10.Close();
+                        }
 
-                        conexao10.Close();
+                        if (sqlidi4 < 8) {
+                            sql = "INSERT INTO cad_terror (id, nome_terror, descricao_terror, ano_terror, avaliacao_terror) " +
+                                "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
+
+                            comando = new MySqlCommand(sql, conexao10);
+
+                            conexao10.Open();
+                            comando.ExecuteReader();
+
+                            MessageBox.Show("Jogo de terror inserido com sucesso!");
+
+                            conexao10.Close();
+                        }
+                        else if (sqlidi4 == 8)
+                        {
+                            MessageBox.Show("A tabela já possui 8 jogos da categoria!");
+                        }
                         break;
                 }
             }
@@ -188,6 +286,11 @@ namespace Projeto_Loja_Games
             break;
 
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            idcheck = 1;
         }
     }
 }
