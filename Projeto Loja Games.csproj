@@ -61,6 +61,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FimCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FimCompra.Designer.cs">
+      <DependentUpon>FimCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FimCompra1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FimCompra1.Designer.cs">
+      <DependentUpon>FimCompra1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Jogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,12 @@
     <Compile Include="pegarnome.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FimCompra.resx">
+      <DependentUpon>FimCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FimCompra1.resx">
+      <DependentUpon>FimCompra1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Jogo.resx">
       <DependentUpon>Jogo.cs</DependentUpon>
     </EmbeddedResource>
