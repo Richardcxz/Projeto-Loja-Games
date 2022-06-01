@@ -394,11 +394,11 @@ namespace Projeto_Loja_Games
 
             string nomejogo = "teste";
 
-            if (Projeto_Loja_Games.Program.lista == 1) {
+            if (Projeto_Loja_Games.Program.lista == 2) {
                 switch (nomejogo)
                 {
                     default:
-                        pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                        pictureBox2.ImageLocation = @"C:\imgproj\eldenring.jpg";
                         break;
                     case "Detroit":
                         pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
