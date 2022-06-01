@@ -16,7 +16,9 @@ namespace Projeto_Loja_Games
         MySqlConnection conexao;
         MySqlConnection conexao2;
         MySqlDataReader dr;
+        MySqlDataReader pegarlastid;
         public string sql;
+        public int sqlidi1;
         string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
         
         public ListaJogos()
@@ -29,14 +31,17 @@ namespace Projeto_Loja_Games
             conexao = new MySqlConnection(data_source); 
             conexao.Open();
 
-            sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 1";
-            MySqlCommand cmnd = new MySqlCommand(sql, conexao);
-            MySqlDataReader pegarnome = cmnd.ExecuteReader();
-            pegarnome.Read();
-            string nomejogo = pegarnome["nome_aventura"].ToString();
-            conexao.Close();
+            string sqlid1 = "SELECT ID FROM cad_acao where ID =(Select Max(ID) from cad_acao);";
+            MySqlCommand cmnd1 = new MySqlCommand(sqlid1, conexao);
+            pegarlastid = cmnd1.ExecuteReader();
+            pegarlastid.Read();
+            string strlastid1 = pegarlastid["ID"].ToString();
+            sqlidi1 = Int32.Parse(strlastid1);
+            Program.idnumber = sqlidi1;
 
-            if(Projeto_Loja_Games.Program.lista == 3) {
+            string nomejogo = "teste";
+
+            if (Projeto_Loja_Games.Program.lista == 3) {
                 switch (nomejogo)
                 {
                     case "Detroit":
