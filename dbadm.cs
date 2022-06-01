@@ -82,6 +82,8 @@ namespace Projeto_Loja_Games
                             MessageBox.Show("Jogo de ação inserido com sucesso!");
 
                             conexao10.Close();
+                            //---------------------------------------------------------
+
                         }
                         else if (sqlidi1 == 8)
                         {
