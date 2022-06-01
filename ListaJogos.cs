@@ -36,6 +36,7 @@ namespace Projeto_Loja_Games
             conexao = new MySqlConnection(data_source); 
             conexao.Open();
 
+            if(Program.lista == 1) { 
             string sqlid1 = "SELECT ID FROM cad_acao where ID =(Select Max(ID) from cad_acao);";
             MySqlCommand cmnd1 = new MySqlCommand(sqlid1, conexao);
             pegarlastid = cmnd1.ExecuteReader();
@@ -44,33 +45,352 @@ namespace Projeto_Loja_Games
             sqlidi1 = Int32.Parse(strlastid1);
             Program.idnumberac = sqlidi1;
             pegarlastid.Close();
+            }
 
-            string sqlid2 = "SELECT ID FROM cad_rpg where ID =(Select Max(ID) from cad_rpg);";
-            MySqlCommand cmnd2 = new MySqlCommand(sqlid2, conexao);
-            pegarlastid = cmnd2.ExecuteReader();
-            pegarlastid.Read();
-            string strlastid2 = pegarlastid["ID"].ToString();
-            sqlidi2 = Int32.Parse(strlastid2);
-            Program.idnumberrpg = sqlidi2;
-            pegarlastid.Close();
+            if (Program.lista == 2)
+            {
+                string sqlid2 = "SELECT ID FROM cad_rpg where ID =(Select Max(ID) from cad_rpg);";
+                MySqlCommand cmnd2 = new MySqlCommand(sqlid2, conexao);
+                pegarlastid = cmnd2.ExecuteReader();
+                pegarlastid.Read();
+                string strlastid2 = pegarlastid["ID"].ToString();
+                sqlidi2 = Int32.Parse(strlastid2);
+                Program.idnumberrpg = sqlidi2;
+                pegarlastid.Close();
+            }
 
-            string sqlid3 = "SELECT ID FROM cad_aventura where ID =(Select Max(ID) from cad_aventura);";
-            MySqlCommand cmnd3 = new MySqlCommand(sqlid3, conexao);
-            pegarlastid = cmnd3.ExecuteReader();
-            pegarlastid.Read();
-            string strlastid3 = pegarlastid["ID"].ToString();
-            sqlidi3 = Int32.Parse(strlastid3);
-            Program.idnumberav = sqlidi3;
-            pegarlastid.Close();
+            if (Program.lista == 3)
+            {
+                string sqlid3 = "SELECT ID FROM cad_aventura where ID =(Select Max(ID) from cad_aventura);";
+                MySqlCommand cmnd3 = new MySqlCommand(sqlid3, conexao);
+                pegarlastid = cmnd3.ExecuteReader();
+                pegarlastid.Read();
+                string strlastid3 = pegarlastid["ID"].ToString();
+                sqlidi3 = Int32.Parse(strlastid3);
+                Program.idnumberav = sqlidi3;
+                pegarlastid.Close();
+            }
 
-            string sqlid4 = "SELECT ID FROM cad_terror where ID =(Select Max(ID) from cad_terror);";
-            MySqlCommand cmnd4 = new MySqlCommand(sqlid4, conexao);
-            pegarlastid = cmnd4.ExecuteReader();
-            pegarlastid.Read();
-            string strlastid4 = pegarlastid["ID"].ToString();
-            sqlidi4 = Int32.Parse(strlastid4);
-            Program.idnumbertr = sqlidi4;
-            pegarlastid.Close();
+            if (Program.lista == 4)
+            {
+                string sqlid4 = "SELECT ID FROM cad_terror where ID =(Select Max(ID) from cad_terror);";
+                MySqlCommand cmnd4 = new MySqlCommand(sqlid4, conexao);
+                pegarlastid = cmnd4.ExecuteReader();
+                pegarlastid.Read();
+                string strlastid4 = pegarlastid["ID"].ToString();
+                sqlidi4 = Int32.Parse(strlastid4);
+                Program.idnumbertr = sqlidi4;
+                pegarlastid.Close();
+            }
+
+            if (Program.lista == 1)
+            {
+                switch (Program.idnumberac)
+                {
+                    case 1:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = false;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 2:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 3:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 4:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 5:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 6:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 7:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = true;
+                        pictureBox8.Enabled = false;
+                        break;
+                }
+            }
+
+            if (Program.lista == 2)
+            {
+                switch (Program.idnumberrpg)
+                {
+                    case 1:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = false;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 2:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 3:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 4:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 5:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 6:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 7:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = true;
+                        pictureBox8.Enabled = false;
+                        break;
+                }
+            }
+
+            if (Program.lista == 3)
+            {
+                switch (Program.idnumberav)
+                {
+                    case 1:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = false;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 2:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 3:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 4:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 5:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 6:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 7:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = true;
+                        pictureBox8.Enabled = false;
+                        break;
+                }
+            }
+
+            if (Program.lista == 4)
+            {
+                switch (Program.idnumbertr)
+                {
+                    case 1:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = false;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 2:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = false;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 3:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = false;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 4:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = false;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 5:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = false;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 6:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = false;
+                        pictureBox8.Enabled = false;
+                        break;
+                    case 7:
+                        pictureBox1.Enabled = true;
+                        pictureBox2.Enabled = true;
+                        pictureBox3.Enabled = true;
+                        pictureBox4.Enabled = true;
+                        pictureBox5.Enabled = true;
+                        pictureBox6.Enabled = true;
+                        pictureBox7.Enabled = true;
+                        pictureBox8.Enabled = false;
+                        break;
+                }
+            }
+
 
             string nomejogo = "teste";
 
@@ -567,6 +887,11 @@ namespace Projeto_Loja_Games
             this.Hide();
             var jg = new Jogo();
             jg.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
