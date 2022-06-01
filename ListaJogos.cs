@@ -391,21 +391,123 @@ namespace Projeto_Loja_Games
                 }
             }
 
+            if (Projeto_Loja_Games.Program.lista == 1) {
 
-            string nomejogo = "teste";
+                String[] jogoac = new String[8];
 
-            if (Projeto_Loja_Games.Program.lista == 2) {
-                switch (nomejogo)
-                {
-                    default:
-                        pictureBox2.ImageLocation = @"C:\imgproj\eldenring.jpg";
-                        break;
-                    case "Detroit":
-                        pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
-                        break;
-                    case "detroit":
-                        pictureBox1.ImageLocation = @"C:\imgproj\detroit.png";
-                        break;
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 1;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[1] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[1];
+                pegarnome.Close();
+
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 2;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[2] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[2];
+                pegarnome.Close();
+
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 3;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[3] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[3];
+                pegarnome.Close();
+
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 4;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[4] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[4];
+                pegarnome.Close();
+
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 5;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[5] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[5];
+                pegarnome.Close();
+
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 6;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[6] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[6];
+                pegarnome.Close();
+
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 7;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[7] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[7];
+                pegarnome.Close();
+                sql = "SELECT nome_acao FROM cad_acao WHERE id = 8;";
+                cmnd = new MySqlCommand(sql, conexao);
+                pegarnome = cmnd.ExecuteReader();
+                pegarnome.Read();
+                jogoac[8] = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac[8];
+                pegarnome.Close();
+
+
+                for (int x=1;x<=8;x++) {
+                    switch (jogoac[x])
+                    {
+                        default:
+                            if (x == 1)
+                            {
+                                pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            else if (x == 2)
+                            {
+                                pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            else if (x == 3)
+                            {
+                                pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            else if (x == 4)
+                            {
+                                pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            else if (x == 5)
+                            {
+                                pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            else if (x == 6)
+                            {
+                                pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            else if (x == 7)
+                            {
+                                pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            else if (x == 8)
+                            {
+                                pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                            }
+                            break;
+
+                        case "1":
+                            pictureBox1.ImageLocation = @"C:\imgproj\";
+                            break;
+                        case "2":
+                            pictureBox1.ImageLocation = @"C:\imgproj\";
+                            break;
+                        case "3":
+                            pictureBox1.ImageLocation = @"C:\imgproj\";
+                            break;
+
+                    }
                 }
             }
 
