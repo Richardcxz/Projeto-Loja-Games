@@ -39,6 +39,15 @@ namespace Projeto_Loja_Games
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked == true)
+            {
+                idcheck = 1;
+            }
+            else
+            {
+                idcheck = 0;
+            }
+
             if (textBox1.Text != "" && textBox2.Text != "") {
 
                 conexao10.Close();
@@ -56,6 +65,7 @@ namespace Projeto_Loja_Games
                             pegarlastid.Read();
                             string strlastid1 = pegarlastid["ID"].ToString();
                             sqlidi1 = Int32.Parse(strlastid1);
+                            Program.idnumber = sqlidi1;
 
                             conexao10.Close();
                         }
@@ -91,8 +101,9 @@ namespace Projeto_Loja_Games
                         pegarlastid2.Read();
                         string strlastid2 = pegarlastid2["ID"].ToString();
                         sqlidi2 = Int32.Parse(strlastid2);
+                        Program.idnumber = sqlidi2;
 
-                        conexao10.Close();
+                            conexao10.Close();
                         }
 
                         if (sqlidi2 < 8)
@@ -127,6 +138,7 @@ namespace Projeto_Loja_Games
                             pegarlastid3.Read();
                             string strlastid3 = pegarlastid3["ID"].ToString();
                             sqlidi3 = Int32.Parse(strlastid3);
+                            Program.idnumber = sqlidi3;
 
                             conexao10.Close();
                         }
@@ -163,6 +175,7 @@ namespace Projeto_Loja_Games
                             pegarlastid4.Read();
                             string strlastid4 = pegarlastid4["ID"].ToString();
                             sqlidi4 = Int32.Parse(strlastid4);
+                            Program.idnumber = sqlidi4;
 
                             conexao10.Close();
                         }
@@ -286,11 +299,6 @@ namespace Projeto_Loja_Games
             break;
 
             }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            idcheck = 1;
         }
     }
 }

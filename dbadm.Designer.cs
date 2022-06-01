@@ -209,7 +209,6 @@
             this.checkBox1.TabIndex = 33;
             this.checkBox1.Text = "DB VAZIA?";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // dbadm
             // 

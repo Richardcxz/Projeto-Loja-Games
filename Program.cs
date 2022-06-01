@@ -16,6 +16,7 @@ namespace Projeto_Loja_Games
         public static int jgesc = 0;
         public static int isadm = 0;
         public static int islogged = 0;
+        public static int idnumber = 0;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

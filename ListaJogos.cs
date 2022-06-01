@@ -24,6 +24,8 @@ namespace Projeto_Loja_Games
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
+
+
             conexao = new MySqlConnection(data_source); 
             conexao.Open();
 
@@ -58,21 +60,237 @@ namespace Projeto_Loja_Games
                 //e caso não tenha o jogo na base de imagens, deixar uma foto padrão para os que não têm
                 case 1:
                     label9.Text = "JOGOS DE AÇÃO";
+                    conexao.Open();
+
+                    if (Program.idnumber >= 1)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 1;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac1 = pegarnome["nome_acao"].ToString();
+                        label1.Text = jogoac1;
+                        pegarnome.Close();
+                    }
+
+                    if (Program.idnumber >= 2)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 2;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac2 = pegarnome["nome_acao"].ToString();
+                        label2.Text = jogoac2;
+                        pegarnome.Close();
+                    }
+
+                    if (Program.idnumber >= 3)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 3;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac3 = pegarnome["nome_acao"].ToString();
+                        label3.Text = jogoac3;
+                        pegarnome.Close();
+                    }
+
+                    if (Program.idnumber >= 4)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 4;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac4 = pegarnome["nome_acao"].ToString();
+                        label4.Text = jogoac4;
+                        pegarnome.Close();
+                    }
+
+                    if (Program.idnumber >= 5)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 5;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac5 = pegarnome["nome_acao"].ToString();
+                        label5.Text = jogoac5;
+                        pegarnome.Close();
+                    }
+
+                    if (Program.idnumber >= 6)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 6;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac6 = pegarnome["nome_acao"].ToString();
+                        label6.Text = jogoac6;
+                        pegarnome.Close();
+                    }
+
+                    if (Program.idnumber >= 7)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 7;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac7 = pegarnome["nome_acao"].ToString();
+                        label7.Text = jogoac7;
+                        pegarnome.Close();
+                    }
+
+                    if (Program.idnumber >= 8)
+                    {
+                        sql = "SELECT nome_acao FROM cad_acao WHERE id = 8;";
+                        cmnd = new MySqlCommand(sql, conexao);
+                        pegarnome = cmnd.ExecuteReader();
+                        pegarnome.Read();
+                        string jogoac8 = pegarnome["nome_acao"].ToString();
+                        label8.Text = jogoac8;
+                        pegarnome.Close();
+                    }
+
+                    conexao.Close();
+
                     break;
                 case 2:
+                    label9.Text = "JOGOS DE RPG";
+                    conexao.Open();
 
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 1;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor1 = pegarnome["nome_rpg"].ToString();
+                    label1.Text = jogor1;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 2;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor2 = pegarnome["nome_rpg"].ToString();
+                    label2.Text = jogor2;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 3;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor3 = pegarnome["nome_rpg"].ToString();
+                    label3.Text = jogor3;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 4;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor4 = pegarnome["nome_rpg"].ToString();
+                    label4.Text = jogor4;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 5;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor5 = pegarnome["nome_rpg"].ToString();
+                    label5.Text = jogor5;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 6;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor6 = pegarnome["nome_rpg"].ToString();
+                    label6.Text = jogor6;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 7;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor7 = pegarnome["nome_rpg"].ToString();
+                    label7.Text = jogor7;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 8;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogor8 = pegarnome["nome_rpg"].ToString();
+                    label8.Text = jogor8;
+                    pegarnome.Close();
+
+                    conexao.Close();
 
                     break;
                 case 3:
                     label9.Text = "JOGOS DE AVENTURA";
+                    conexao.Open();
 
                     sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 1;";
                     cmnd = new MySqlCommand(sql, conexao);
-                    conexao.Open();
                     pegarnome = cmnd.ExecuteReader();
                     pegarnome.Read();
-                    string jogo1 = pegarnome["nome_aventura"].ToString();
-                    label1.Text = jogo1;
+                    string jogoav1 = pegarnome["nome_aventura"].ToString();
+                    label1.Text = jogoav1;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 2;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogoav2 = pegarnome["nome_aventura"].ToString();
+                    label2.Text = jogoav2;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 3;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogoav3 = pegarnome["nome_aventura"].ToString();
+                    label3.Text = jogoav3;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 4;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogoav4 = pegarnome["nome_aventura"].ToString();
+                    label4.Text = jogoav4;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 5;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogoav5 = pegarnome["nome_aventura"].ToString();
+                    label5.Text = jogoav5;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 6;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogoav6 = pegarnome["nome_aventura"].ToString();
+                    label6.Text = jogoav6;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 7;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogoav7 = pegarnome["nome_aventura"].ToString();
+                    label7.Text = jogoav7;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 8;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogoav8 = pegarnome["nome_aventura"].ToString();
+                    label8.Text = jogoav8;
+                    pegarnome.Close();
 
 
                     conexao.Close();
@@ -81,6 +299,73 @@ namespace Projeto_Loja_Games
                     break;
                 case 4:
                     label9.Text = "JOGOS DE TERROR";
+                    conexao.Open();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 1;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr1 = pegarnome["nome_terror"].ToString();
+                    label1.Text = jogotr1;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 2;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr2 = pegarnome["nome_terror"].ToString();
+                    label2.Text = jogotr2;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 3;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr3 = pegarnome["nome_terror"].ToString();
+                    label3.Text = jogotr3;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 4;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr4 = pegarnome["nome_terror"].ToString();
+                    label4.Text = jogotr4;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 5;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr5 = pegarnome["nome_terror"].ToString();
+                    label5.Text = jogotr5;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 6;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr6 = pegarnome["nome_terror"].ToString();
+                    label6.Text = jogotr6;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 7;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr7 = pegarnome["nome_terror"].ToString();
+                    label7.Text = jogotr7;
+                    pegarnome.Close();
+
+                    sql = "SELECT nome_terror FROM cad_terror WHERE id = 8;";
+                    cmnd = new MySqlCommand(sql, conexao);
+                    pegarnome = cmnd.ExecuteReader();
+                    pegarnome.Read();
+                    string jogotr8 = pegarnome["nome_terror"].ToString();
+                    label8.Text = jogotr8;
+                    pegarnome.Close();
+
+                    conexao.Close();
 
                     break;
             }
