@@ -87,7 +87,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Location = new System.Drawing.Point(445, 76);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(108, 249);
             this.pictureBox4.TabIndex = 24;
@@ -98,7 +98,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Location = new System.Drawing.Point(310, 76);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(108, 249);
             this.pictureBox3.TabIndex = 23;
@@ -109,7 +109,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Location = new System.Drawing.Point(179, 76);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(108, 249);
             this.pictureBox2.TabIndex = 22;
@@ -120,7 +120,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(47, 76);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 249);
             this.pictureBox1.TabIndex = 21;
@@ -142,17 +142,18 @@ namespace Projeto_Loja_Games
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(25, 43);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 19);
             this.button1.TabIndex = 28;
             this.button1.Text = "Log de alterações";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(25, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 19);
             this.button2.TabIndex = 29;
@@ -175,7 +176,7 @@ namespace Projeto_Loja_Games
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(512, 15);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 19);
             this.button3.TabIndex = 31;
@@ -201,7 +202,7 @@ namespace Projeto_Loja_Games
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1adm";
             this.Text = "Menu Admin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

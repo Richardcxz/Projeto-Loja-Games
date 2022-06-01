@@ -73,6 +73,12 @@
     <Compile Include="FimCompra1.Designer.cs">
       <DependentUpon>FimCompra1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FimCompraNext.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FimCompraNext.Designer.cs">
+      <DependentUpon>FimCompraNext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Jogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     <Compile Include="Form1log.Designer.cs">
       <DependentUpon>Form1log.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogAdm.Designer.cs">
+      <DependentUpon>LogAdm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FimCompra1.resx">
       <DependentUpon>FimCompra1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FimCompraNext.resx">
+      <DependentUpon>FimCompraNext.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jogo.resx">
       <DependentUpon>Jogo.cs</DependentUpon>
@@ -159,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1log.resx">
       <DependentUpon>Form1log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogAdm.resx">
+      <DependentUpon>LogAdm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

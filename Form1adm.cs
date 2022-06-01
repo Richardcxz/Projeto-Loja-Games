@@ -63,5 +63,12 @@ namespace Projeto_Loja_Games
             var mn = new Form1();
             mn.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var log = new LogAdm();
+            log.Show();
+        }
     }
 }

@@ -21,12 +21,13 @@ namespace Projeto_Loja_Games
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var init = new FimCompra1();
+            var init = new FimCompraNext();
             init.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Compra Cancelada!");
             this.Hide();
             var init = new ListaJogos();
             init.Show();
@@ -34,7 +35,22 @@ namespace Projeto_Loja_Games
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+        if(comboBox1.SelectedIndex == 1)
+            {
+                Program.formapag = 1;
+            }
+        else if (comboBox1.SelectedIndex == 2)
+            {
+                Program.formapag = 2;
+            }
+        else if (comboBox1.SelectedIndex == 3)
+            {
+                Program.formapag = 3;
+            }
+        else if (comboBox1.SelectedIndex == 4)
+            {
+                Program.formapag = 4;
+            }
         }
     }
 }

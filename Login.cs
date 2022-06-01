@@ -28,6 +28,7 @@ namespace Projeto_Loja_Games
             if (adm1 == 1 && adm2 == 1)
             {
                 Projeto_Loja_Games.Program.isadm = 1;
+                Projeto_Loja_Games.Program.buy = 1;
                 MessageBox.Show("Admin detectado.");
                 this.Hide();
                 var menuadm = new Form1adm();
@@ -50,6 +51,7 @@ namespace Projeto_Loja_Games
                     reader.Close();
                     conexao.Close();
                     Projeto_Loja_Games.Program.islogged = 1;
+                    Projeto_Loja_Games.Program.buy = 1;
                     MessageBox.Show("Login Realizado.");
                     this.Hide();
                     var menulog = new Form1log();

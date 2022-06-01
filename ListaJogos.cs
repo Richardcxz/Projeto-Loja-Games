@@ -391,130 +391,6 @@ namespace Projeto_Loja_Games
                 }
             }
 
-            if (Projeto_Loja_Games.Program.lista == 1) {
-
-                String[] jogoac = new String[8];
-
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 1;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[1] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[1];
-                pegarnome.Close();
-
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 2;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[2] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[2];
-                pegarnome.Close();
-
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 3;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[3] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[3];
-                pegarnome.Close();
-
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 4;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[4] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[4];
-                pegarnome.Close();
-
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 5;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[5] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[5];
-                pegarnome.Close();
-
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 6;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[6] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[6];
-                pegarnome.Close();
-
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 7;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[7] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[7];
-                pegarnome.Close();
-                sql = "SELECT nome_acao FROM cad_acao WHERE id = 8;";
-                cmnd = new MySqlCommand(sql, conexao);
-                pegarnome = cmnd.ExecuteReader();
-                pegarnome.Read();
-                jogoac[8] = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac[8];
-                pegarnome.Close();
-
-
-                for (int x=1;x<=8;x++) {
-                    switch (jogoac[x])
-                    {
-                        default:
-                            if (x == 1)
-                            {
-                                pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            else if (x == 2)
-                            {
-                                pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            else if (x == 3)
-                            {
-                                pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            else if (x == 4)
-                            {
-                                pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            else if (x == 5)
-                            {
-                                pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            else if (x == 6)
-                            {
-                                pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            else if (x == 7)
-                            {
-                                pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            else if (x == 8)
-                            {
-                                pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
-                            }
-                            break;
-
-                        case "1":
-                            pictureBox1.ImageLocation = @"C:\imgproj\";
-                            break;
-                        case "2":
-                            pictureBox1.ImageLocation = @"C:\imgproj\";
-                            break;
-                        case "3":
-                            pictureBox1.ImageLocation = @"C:\imgproj\";
-                            break;
-
-                    }
-                }
-            }
-
-
-
-
-
             conexao.Close();
 
             switch (Projeto_Loja_Games.Program.lista)
@@ -525,14 +401,16 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE AÇÃO";
                     conexao.Open();
 
+                    String[] jogoac = new string[9];
+
                     if (Program.idnumberac >= 1)
                     {
                         sql = "SELECT nome_acao FROM cad_acao WHERE id = 1;";
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac1 = pegarnome["nome_acao"].ToString();
-                        label1.Text = jogoac1;
+                        jogoac[1] = pegarnome["nome_acao"].ToString();
+                        label1.Text = jogoac[1];
                         pegarnome.Close();
                     }
 
@@ -542,8 +420,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac2 = pegarnome["nome_acao"].ToString();
-                        label2.Text = jogoac2;
+                        jogoac[2] = pegarnome["nome_acao"].ToString();
+                        label2.Text = jogoac[2];
                         pegarnome.Close();
                     }
 
@@ -553,8 +431,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac3 = pegarnome["nome_acao"].ToString();
-                        label3.Text = jogoac3;
+                        jogoac[3] = pegarnome["nome_acao"].ToString();
+                        label3.Text = jogoac[3];
                         pegarnome.Close();
                     }
 
@@ -564,8 +442,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac4 = pegarnome["nome_acao"].ToString();
-                        label4.Text = jogoac4;
+                        jogoac[4] = pegarnome["nome_acao"].ToString();
+                        label4.Text = jogoac[4];
                         pegarnome.Close();
                     }
 
@@ -575,8 +453,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac5 = pegarnome["nome_acao"].ToString();
-                        label5.Text = jogoac5;
+                        jogoac[5] = pegarnome["nome_acao"].ToString();
+                        label5.Text = jogoac[5];
                         pegarnome.Close();
                     }
 
@@ -586,8 +464,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac6 = pegarnome["nome_acao"].ToString();
-                        label6.Text = jogoac6;
+                        jogoac[6] = pegarnome["nome_acao"].ToString();
+                        label6.Text = jogoac[6];
                         pegarnome.Close();
                     }
 
@@ -597,8 +475,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac7 = pegarnome["nome_acao"].ToString();
-                        label7.Text = jogoac7;
+                        jogoac[7] = pegarnome["nome_acao"].ToString();
+                        label7.Text = jogoac[7];
                         pegarnome.Close();
                     }
 
@@ -608,9 +486,61 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoac8 = pegarnome["nome_acao"].ToString();
-                        label8.Text = jogoac8;
+                        jogoac[8] = pegarnome["nome_acao"].ToString();
+                        label8.Text = jogoac[8];
                         pegarnome.Close();
+                    }
+
+                    for (int x = 1; x <= sqlidi1; x++)
+                    {
+                        switch (jogoac[x])
+                        {
+                            default:
+                                if (x == 1)
+                                {
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 2)
+                                {
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 3)
+                                {
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 4)
+                                {
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 5)
+                                {
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 6)
+                                {
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 7)
+                                {
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 8)
+                                {
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                break;
+
+                            case "9":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "99":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "999":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+
+                        }
                     }
 
                     conexao.Close();
@@ -620,14 +550,16 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE RPG";
                     conexao.Open();
 
+                    String[] jogorpg = new string[9];
+
                     if (Program.idnumberrpg >= 1)
                     {
                         sql = "SELECT nome_rpg FROM cad_rpg WHERE id = 1;";
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor1 = pegarnome["nome_rpg"].ToString();
-                        label1.Text = jogor1;
+                        jogorpg[1] = pegarnome["nome_rpg"].ToString();
+                        label1.Text = jogorpg[1];
                         pegarnome.Close();
                     }
 
@@ -637,8 +569,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor2 = pegarnome["nome_rpg"].ToString();
-                        label2.Text = jogor2;
+                        jogorpg[2] = pegarnome["nome_rpg"].ToString();
+                        label2.Text = jogorpg[2];
                         pegarnome.Close();
                     }
 
@@ -648,8 +580,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor3 = pegarnome["nome_rpg"].ToString();
-                        label3.Text = jogor3;
+                        jogorpg[3] = pegarnome["nome_rpg"].ToString();
+                        label3.Text = jogorpg[3];
                         pegarnome.Close();
                     }
 
@@ -659,8 +591,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor4 = pegarnome["nome_rpg"].ToString();
-                        label4.Text = jogor4;
+                        jogorpg[4] = pegarnome["nome_rpg"].ToString();
+                        label4.Text = jogorpg[4];
                         pegarnome.Close();
                     }
 
@@ -670,8 +602,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor5 = pegarnome["nome_rpg"].ToString();
-                        label5.Text = jogor5;
+                        jogorpg[5] = pegarnome["nome_rpg"].ToString();
+                        label5.Text = jogorpg[5];
                         pegarnome.Close();
                     }
 
@@ -681,8 +613,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor6 = pegarnome["nome_rpg"].ToString();
-                        label6.Text = jogor6;
+                        jogorpg[6] = pegarnome["nome_rpg"].ToString();
+                        label6.Text = jogorpg[6];
                         pegarnome.Close();
                     }
 
@@ -692,8 +624,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor7 = pegarnome["nome_rpg"].ToString();
-                        label7.Text = jogor7;
+                        jogorpg[7] = pegarnome["nome_rpg"].ToString();
+                        label7.Text = jogorpg[7];
                         pegarnome.Close();
                     }
 
@@ -703,9 +635,61 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogor8 = pegarnome["nome_rpg"].ToString();
-                        label8.Text = jogor8;
+                        jogorpg[8] = pegarnome["nome_rpg"].ToString();
+                        label8.Text = jogorpg[8];
                         pegarnome.Close();
+                    }
+
+                    for (int x = 1; x <= sqlidi2; x++)
+                    {
+                        switch (jogorpg[x])
+                        {
+                            default:
+                                if (x == 1)
+                                {
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 2)
+                                {
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 3)
+                                {
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 4)
+                                {
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 5)
+                                {
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 6)
+                                {
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 7)
+                                {
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 8)
+                                {
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                break;
+
+                            case "9":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "99":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "999":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+
+                        }
                     }
 
                     conexao.Close();
@@ -715,14 +699,16 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE AVENTURA";
                     conexao.Open();
 
+                    String[] jogoav = new string[9];
+
                     if (Program.idnumberav >= 1)
                     {
                         sql = "SELECT nome_aventura FROM cad_aventura WHERE id = 1;";
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav1 = pegarnome["nome_aventura"].ToString();
-                        label1.Text = jogoav1;
+                        jogoav[1] = pegarnome["nome_aventura"].ToString();
+                        label1.Text = jogoav[1];
                         pegarnome.Close();
                     }
 
@@ -732,8 +718,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav2 = pegarnome["nome_aventura"].ToString();
-                        label2.Text = jogoav2;
+                        jogoav[2] = pegarnome["nome_aventura"].ToString();
+                        label2.Text = jogoav[2];
                         pegarnome.Close();
                     }
 
@@ -743,8 +729,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav3 = pegarnome["nome_aventura"].ToString();
-                        label3.Text = jogoav3;
+                        jogoav[3] = pegarnome["nome_aventura"].ToString();
+                        label3.Text = jogoav[3];
                         pegarnome.Close();
                     }
 
@@ -754,8 +740,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav4 = pegarnome["nome_aventura"].ToString();
-                        label4.Text = jogoav4;
+                        jogoav[4] = pegarnome["nome_aventura"].ToString();
+                        label4.Text = jogoav[4];
                         pegarnome.Close();
                     }
 
@@ -765,8 +751,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav5 = pegarnome["nome_aventura"].ToString();
-                        label5.Text = jogoav5;
+                        jogoav[5] = pegarnome["nome_aventura"].ToString();
+                        label5.Text = jogoav[5];
                         pegarnome.Close();
                     }
 
@@ -776,8 +762,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav6 = pegarnome["nome_aventura"].ToString();
-                        label6.Text = jogoav6;
+                        jogoav[6] = pegarnome["nome_aventura"].ToString();
+                        label6.Text = jogoav[6];
                         pegarnome.Close();
                     }
 
@@ -787,8 +773,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav7 = pegarnome["nome_aventura"].ToString();
-                        label7.Text = jogoav7;
+                        jogoav[7] = pegarnome["nome_aventura"].ToString();
+                        label7.Text = jogoav[7];
                         pegarnome.Close();
                     }
 
@@ -798,11 +784,62 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogoav8 = pegarnome["nome_aventura"].ToString();
-                        label8.Text = jogoav8;
+                        jogoav[8] = pegarnome["nome_aventura"].ToString();
+                        label8.Text = jogoav[8];
                         pegarnome.Close();
                     }
 
+                    for (int x = 1; x <= sqlidi3; x++)
+                    {
+                        switch (jogoav[x])
+                        {
+                            default:
+                                if (x == 1)
+                                {
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 2)
+                                {
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 3)
+                                {
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 4)
+                                {
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 5)
+                                {
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 6)
+                                {
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 7)
+                                {
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 8)
+                                {
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                break;
+
+                            case "9":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "99":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "999":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+
+                        }
+                    }
 
                     conexao.Close();
 
@@ -812,14 +849,16 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE TERROR";
                     conexao.Open();
 
+                    String[] jogotr = new string[9];
+
                     if (Program.idnumbertr >= 1)
                     {
                         sql = "SELECT nome_terror FROM cad_terror WHERE id = 1;";
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr1 = pegarnome["nome_terror"].ToString();
-                        label1.Text = jogotr1;
+                        jogotr[1] = pegarnome["nome_terror"].ToString();
+                        label1.Text = jogotr[1];
                         pegarnome.Close();
                     }
 
@@ -829,8 +868,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr2 = pegarnome["nome_terror"].ToString();
-                        label2.Text = jogotr2;
+                        jogotr[2] = pegarnome["nome_terror"].ToString();
+                        label2.Text = jogotr[2];
                         pegarnome.Close();
                     }
 
@@ -840,8 +879,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr3 = pegarnome["nome_terror"].ToString();
-                        label3.Text = jogotr3;
+                        jogotr[3] = pegarnome["nome_terror"].ToString();
+                        label3.Text = jogotr[3];
                         pegarnome.Close();
                     }
 
@@ -851,8 +890,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr4 = pegarnome["nome_terror"].ToString();
-                        label4.Text = jogotr4;
+                        jogotr[4] = pegarnome["nome_terror"].ToString();
+                        label4.Text = jogotr[4];
                         pegarnome.Close();
                     }
 
@@ -862,8 +901,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr5 = pegarnome["nome_terror"].ToString();
-                        label5.Text = jogotr5;
+                        jogotr[5] = pegarnome["nome_terror"].ToString();
+                        label5.Text = jogotr[5];
                         pegarnome.Close();
                     }
 
@@ -873,8 +912,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr6 = pegarnome["nome_terror"].ToString();
-                        label6.Text = jogotr6;
+                        jogotr[6] = pegarnome["nome_terror"].ToString();
+                        label6.Text = jogotr[6];
                         pegarnome.Close();
                     }
 
@@ -884,8 +923,8 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr7 = pegarnome["nome_terror"].ToString();
-                        label7.Text = jogotr7;
+                        jogotr[7] = pegarnome["nome_terror"].ToString();
+                        label7.Text = jogotr[7];
                         pegarnome.Close();
                     }
 
@@ -895,9 +934,61 @@ namespace Projeto_Loja_Games
                         cmnd = new MySqlCommand(sql, conexao);
                         pegarnome = cmnd.ExecuteReader();
                         pegarnome.Read();
-                        string jogotr8 = pegarnome["nome_terror"].ToString();
-                        label8.Text = jogotr8;
+                        jogotr[8] = pegarnome["nome_terror"].ToString();
+                        label8.Text = jogotr[8];
                         pegarnome.Close();
+                    }
+
+                    for (int x = 1; x <= sqlidi4; x++)
+                    {
+                        switch (jogotr[x])
+                        {
+                            default:
+                                if (x == 1)
+                                {
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 2)
+                                {
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 3)
+                                {
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 4)
+                                {
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 5)
+                                {
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 6)
+                                {
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 7)
+                                {
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                else if (x == 8)
+                                {
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                }
+                                break;
+
+                            case "9":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "99":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+                            case "999":
+                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                                break;
+
+                        }
                     }
 
                     conexao.Close();

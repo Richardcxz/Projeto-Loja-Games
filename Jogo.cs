@@ -185,5 +185,18 @@ namespace Projeto_Loja_Games
                 var lst = new ListaJogos();
                 lst.Show();
             }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Program.buy == 0)
+            {
+            MessageBox.Show("Crie uma conta para comprar!");
+            }
+            else { 
+            this.Hide();
+            var compra = new FimCompra();
+            compra.Show();
+            }
         }
+    }
     }
