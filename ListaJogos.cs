@@ -498,35 +498,35 @@ namespace Projeto_Loja_Games
                             default:
                                 if (x == 1)
                                 {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 2)
                                 {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 3)
                                 {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 4)
                                 {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 5)
                                 {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 6)
                                 {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 7)
                                 {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 8)
                                 {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 break;
 
@@ -647,35 +647,35 @@ namespace Projeto_Loja_Games
                             default:
                                 if (x == 1)
                                 {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 2)
                                 {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 3)
                                 {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 4)
                                 {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 5)
                                 {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 6)
                                 {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 7)
                                 {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 8)
                                 {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 break;
 
@@ -796,35 +796,35 @@ namespace Projeto_Loja_Games
                             default:
                                 if (x == 1)
                                 {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 2)
                                 {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 3)
                                 {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 4)
                                 {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 5)
                                 {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 6)
                                 {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 7)
                                 {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 8)
                                 {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 break;
 
@@ -946,35 +946,35 @@ namespace Projeto_Loja_Games
                             default:
                                 if (x == 1)
                                 {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 2)
                                 {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 3)
                                 {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 4)
                                 {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 5)
                                 {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 6)
                                 {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 7)
                                 {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 else if (x == 8)
                                 {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.png";
+                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
                                 }
                                 break;
 
