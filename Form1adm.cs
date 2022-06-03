@@ -57,7 +57,7 @@ namespace Projeto_Loja_Games
             altadm.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.Hide();
             var mn = new Form1();

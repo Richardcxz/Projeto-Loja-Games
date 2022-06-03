@@ -997,26 +997,7 @@ namespace Projeto_Loja_Games
             }
         }
 
-        private void btn_voltar_Click(object sender, EventArgs e)
-        {
-            if (Projeto_Loja_Games.Program.isadm == 1)
-            {
-                this.Hide();
-                var mnadm = new Form1adm();
-                mnadm.Show();
-            }
-            else if (Projeto_Loja_Games.Program.islogged == 1) {
-                this.Hide();
-                var init = new Form1log();
-                init.Show();
-            }
-            else
-            {
-                this.Hide();
-                var mnunl = new Form1();
-                mnunl.Show();
-            }
-        }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -1085,6 +1066,28 @@ namespace Projeto_Loja_Games
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            if (Projeto_Loja_Games.Program.isadm == 1)
+            {
+                this.Hide();
+                var mnadm = new Form1adm();
+                mnadm.Show();
+            }
+            else if (Projeto_Loja_Games.Program.islogged == 1)
+            {
+                this.Hide();
+                var init = new Form1log();
+                init.Show();
+            }
+            else
+            {
+                this.Hide();
+                var mnunl = new Form1();
+                mnunl.Show();
+            }
         }
     }
 }
