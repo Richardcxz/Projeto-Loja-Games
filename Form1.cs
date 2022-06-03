@@ -25,16 +25,12 @@ namespace Projeto_Loja_Games
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var login = new Login();
-            login.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var cad = new Cadastro();
-            cad.Show();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -67,6 +63,20 @@ namespace Projeto_Loja_Games
             this.Hide();
             var ter = new ListaJogos();
             ter.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var cad = new Cadastro();
+            cad.Show();
         }
     }
 }

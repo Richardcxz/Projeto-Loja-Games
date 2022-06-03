@@ -53,9 +53,7 @@ namespace Projeto_Loja_Games
 
         private void btn_voltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var init = new Form1();
-            init.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,6 +76,13 @@ namespace Projeto_Loja_Games
             MessageBox.Show("id selecionado = "+ idhumilde);
 
             conexao.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var init = new Form1();
+            init.Show();
         }
     }
 }

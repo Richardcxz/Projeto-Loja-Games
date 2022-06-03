@@ -50,7 +50,7 @@ namespace Projeto_Loja_Games
             ac.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
             var mnadm = new Form1adm();

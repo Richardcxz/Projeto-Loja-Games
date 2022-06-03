@@ -27,10 +27,7 @@ namespace Projeto_Loja_Games
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Compra Cancelada!");
-            this.Hide();
-            var init = new ListaJogos();
-            init.Show();
+        
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,6 +48,14 @@ namespace Projeto_Loja_Games
             {
                 Program.formapag = 4;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compra Cancelada!");
+            this.Hide();
+            var init = new ListaJogos();
+            init.Show();
         }
     }
 }

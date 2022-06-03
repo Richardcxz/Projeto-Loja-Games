@@ -181,21 +181,32 @@ namespace Projeto_Loja_Games
 
             private void button1_Click(object sender, EventArgs e)
             {
-                this.Hide();
-                var lst = new ListaJogos();
-                lst.Show();
+               
             }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var lst = new ListaJogos();
+            lst.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
             if (Program.buy == 0)
             {
-            MessageBox.Show("Crie uma conta para comprar!");
+                MessageBox.Show("Crie uma conta para comprar!");
             }
-            else { 
-            this.Hide();
-            var compra = new FimCompra();
-            compra.Show();
+            else
+            {
+                this.Hide();
+                var compra = new FimCompra();
+                compra.Show();
             }
         }
     }

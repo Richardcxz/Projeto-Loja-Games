@@ -205,13 +205,6 @@ namespace Projeto_Loja_Games
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var alt = new alteracoesadm();
-            alt.Show();
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             switch (Projeto_Loja_Games.Program.dboption) { 
@@ -297,6 +290,13 @@ namespace Projeto_Loja_Games
             break;
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var alt = new alteracoesadm();
+            alt.Show();
         }
     }
 }
