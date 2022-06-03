@@ -108,7 +108,7 @@ namespace Projeto_Loja_Games
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Projeto_Loja_Games.Properties.Resources._return;
-            this.pictureBox9.Location = new System.Drawing.Point(298, 188);
+            this.pictureBox9.Location = new System.Drawing.Point(317, 205);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(64, 60);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
