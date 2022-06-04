@@ -20,10 +20,7 @@ namespace Projeto_Loja_Games
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.dboption = 1;
-            this.Hide();
-            var ac = new dbadm();
-            ac.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,18 +33,12 @@ namespace Projeto_Loja_Games
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.dboption = 3;
-            this.Hide();
-            var ac = new dbadm();
-            ac.Show();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.dboption = 4;
-            this.Hide();
-            var ac = new dbadm();
-            ac.Show();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -55,6 +46,38 @@ namespace Projeto_Loja_Games
             this.Hide();
             var mnadm = new Form1adm();
             mnadm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.dboption = 1;
+            this.Hide();
+            var ac = new dbadm();
+            ac.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.dboption = 2;
+            this.Hide();
+            var ac = new dbadm();
+            ac.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.dboption = 3;
+            this.Hide();
+            var ac = new dbadm();
+            ac.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.dboption = 4;
+            this.Hide();
+            var ac = new dbadm();
+            ac.Show();
         }
     }
 }

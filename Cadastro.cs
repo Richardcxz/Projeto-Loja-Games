@@ -26,29 +26,7 @@ namespace Projeto_Loja_Games
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "")
-            {
-                
-                string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
-
-                conexao = new MySqlConnection(data_source);
-
-                string sql = "INSERT INTO cad_cliente (nome,senha) " +
-                    "VALUES ('" +textBox1.Text + "','" + textBox2.Text + "') "; 
-
-                MySqlCommand cmnd = new MySqlCommand(sql, conexao);
-
-                conexao.Open();
-                cmnd.ExecuteReader();
-
-                MessageBox.Show("Usuário Cadastrado.");
-
-                this.Hide();
-                var menucad = new Form1log();
-                menucad.Show();
-
-                conexao.Close();
-            }
+            
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
@@ -83,6 +61,33 @@ namespace Projeto_Loja_Games
             this.Hide();
             var init = new Form1();
             init.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
+
+                string data_source = "datasource=localhost;username=root;password=1337;database=db_loja";
+
+                conexao = new MySqlConnection(data_source);
+
+                string sql = "INSERT INTO cad_cliente (nome,senha) " +
+                    "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "') ";
+
+                MySqlCommand cmnd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                cmnd.ExecuteReader();
+
+                MessageBox.Show("Usuário Cadastrado.");
+
+                this.Hide();
+                var menucad = new Form1log();
+                menucad.Show();
+
+                conexao.Close();
+            }
         }
     }
 }

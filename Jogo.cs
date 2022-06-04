@@ -20,6 +20,14 @@ namespace Projeto_Loja_Games
         MySqlDataReader pegarnome;
         MySqlDataReader pegarlastid;
         public string sql;
+        public string jogoac1;
+        public string jogorpg1;
+        public string jogoav1;
+        public string jogotr1;
+        public string jogoac1n;
+        public string jogorpg1n;
+        public string jogoav1n;
+        public string jogotr1n;
         public int sqlidi1;
         public int sqlidi2;
         public int sqlidi3;
@@ -39,8 +47,8 @@ namespace Projeto_Loja_Games
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
                 pegarnome.Read();
-                string jogoac1 = pegarnome["nome_acao"].ToString();
-                label1.Text = jogoac1;
+                jogoac1n = pegarnome["nome_acao"].ToString();
+                label1.Text = jogoac1n;
                 pegarnome.Close();
 
                 sql = "SELECT ano_acao FROM cad_acao WHERE id = " + Program.jgesc + ";";
@@ -74,8 +82,8 @@ namespace Projeto_Loja_Games
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
                 pegarnome.Read();
-                string jogorpg1 = pegarnome["nome_rpg"].ToString();
-                label1.Text = jogorpg1;
+                jogorpg1n = pegarnome["nome_rpg"].ToString();
+                label1.Text = jogorpg1n;
                 pegarnome.Close();
 
                 sql = "SELECT ano_rpg FROM cad_rpg WHERE id = " + Program.jgesc + ";";
@@ -109,8 +117,8 @@ namespace Projeto_Loja_Games
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
                 pegarnome.Read();
-                string jogoav1 = pegarnome["nome_aventura"].ToString();
-                label1.Text = jogoav1;
+                jogoav1n = pegarnome["nome_aventura"].ToString();
+                label1.Text = jogoav1n;
                 pegarnome.Close();
 
                 sql = "SELECT ano_aventura FROM cad_aventura WHERE id = " + Program.jgesc + ";";
@@ -144,8 +152,8 @@ namespace Projeto_Loja_Games
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
                 pegarnome.Read();
-                string jogotr1 = pegarnome["nome_terror"].ToString();
-                label1.Text = jogotr1;
+                jogotr1n = pegarnome["nome_terror"].ToString();
+                label1.Text = jogotr1n;
                 pegarnome.Close();
 
                 sql = "SELECT ano_terror FROM cad_terror WHERE id = " + Program.jgesc + ";";
@@ -173,6 +181,186 @@ namespace Projeto_Loja_Games
                 pegarnome.Close();
             }
 
+            if (Program.lista == 1)
+            {
+                switch (jogoac1n)
+                {
+                    case "":
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    case "4":
+                        break;
+                    case "5":
+                        break;
+                    case "6":
+                        break;
+                    case "7":
+                        break;
+                    case "8":
+                        break;
+                    case "9":
+                        break;
+                    case "10":
+                        break;
+                    case "11":
+                        break;
+                    case "12":
+                        break;
+                    case "13":
+                        break;
+                    case "14":
+                        break;
+                    case "15":
+                        break;
+                    case "16":
+                        break;
+                    case "17":
+                        break;
+                    case "18":
+                        break;
+                    case "19":
+                        break;
+                }
+            }
+
+            else if (Program.lista == 2)
+            {
+                switch (jogorpg1n)
+                {
+                    case "":
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    case "4":
+                        break;
+                    case "5":
+                        break;
+                    case "6":
+                        break;
+                    case "7":
+                        break;
+                    case "8":
+                        break;
+                    case "9":
+                        break;
+                    case "10":
+                        break;
+                    case "11":
+                        break;
+                    case "12":
+                        break;
+                    case "13":
+                        break;
+                    case "14":
+                        break;
+                    case "15":
+                        break;
+                    case "16":
+                        break;
+                    case "17":
+                        break;
+                    case "18":
+                        break;
+                    case "19":
+                        break;
+                }
+            }
+
+            else if (Program.lista == 3)
+            {
+                switch (jogoav1n)
+                {
+                    case "Detroit":
+                        pictureBox1.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    case "4":
+                        break;
+                    case "5":
+                        break;
+                    case "6":
+                        break;
+                    case "7":
+                        break;
+                    case "8":
+                        break;
+                    case "9":
+                        break;
+                    case "10":
+                        break;
+                    case "11":
+                        break;
+                    case "12":
+                        break;
+                    case "13":
+                        break;
+                    case "14":
+                        break;
+                    case "15":
+                        break;
+                    case "16":
+                        break;
+                    case "17":
+                        break;
+                    case "18":
+                        break;
+                    case "19":
+                        break;
+                }
+            }
+
+            else if (Program.lista == 4)
+            {
+                switch (jogotr1n)
+                {
+                    case "":
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    case "4":
+                        break;
+                    case "5":
+                        break;
+                    case "6":
+                        break;
+                    case "7":
+                        break;
+                    case "8":
+                        break;
+                    case "9":
+                        break;
+                    case "10":
+                        break;
+                    case "11":
+                        break;
+                    case "12":
+                        break;
+                    case "13":
+                        break;
+                    case "14":
+                        break;
+                    case "15":
+                        break;
+                    case "16":
+                        break;
+                    case "17":
+                        break;
+                    case "18":
+                        break;
+                    case "19":
+                        break;
+                }
+            }
 
             conexao.Close();
 
@@ -200,7 +388,7 @@ namespace Projeto_Loja_Games
         {
             if (Program.buy == 0)
             {
-                MessageBox.Show("Crie uma conta para comprar!");
+                MessageBox.Show("Crie uma conta ou faça login para comprar!");
             }
             else
             {

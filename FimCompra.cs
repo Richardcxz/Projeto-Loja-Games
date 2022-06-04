@@ -20,9 +20,7 @@ namespace Projeto_Loja_Games
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var init = new FimCompraNext();
-            init.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,6 +53,13 @@ namespace Projeto_Loja_Games
             MessageBox.Show("Compra Cancelada!");
             this.Hide();
             var init = new ListaJogos();
+            init.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var init = new FimCompraNext();
             init.Show();
         }
     }

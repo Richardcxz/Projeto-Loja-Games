@@ -22,6 +22,7 @@ namespace Projeto_Loja_Games
         public static int idnumbertr = 0;
         public static int formapag = 0;
         public static int buy = 0;
+        public static string jogo;
 
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.

@@ -52,9 +52,7 @@ namespace Projeto_Loja_Games
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var altadm = new alteracoesadm();
-            altadm.Show();
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -62,6 +60,13 @@ namespace Projeto_Loja_Games
             this.Hide();
             var mn = new Form1();
             mn.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var altadm = new alteracoesadm();
+            altadm.Show();
         }
     }
 }

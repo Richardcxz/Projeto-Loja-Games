@@ -19,6 +19,10 @@ namespace Projeto_Loja_Games
         MySqlDataReader dr;
         MySqlDataReader pegarnome;
         MySqlDataReader pegarlastid;
+        public String[] jogoac = new string[9];
+        public String[] jogorpg = new string[9];
+        public String[] jogoav = new string[9];
+        public String[] jogotr = new string[9];
         public string sql;
         public int sqlidi1;
         public int sqlidi2;
@@ -401,7 +405,6 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE AÇÃO";
                     conexao.Open();
 
-                    String[] jogoac = new string[9];
 
                     if (Program.idnumberac >= 1)
                     {
@@ -550,7 +553,6 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE RPG";
                     conexao.Open();
 
-                    String[] jogorpg = new string[9];
 
                     if (Program.idnumberrpg >= 1)
                     {
@@ -679,8 +681,41 @@ namespace Projeto_Loja_Games
                                 }
                                 break;
 
-                            case "9":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                            case "Elden Ring":
+
+                                if (x == 1)
+                                {
+                                    pictureBox1.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+                                else if (x == 2)
+                                {
+                                    pictureBox2.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+                                else if (x == 3)
+                                {
+                                    pictureBox3.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+                                else if (x == 4)
+                                {
+                                    pictureBox4.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+                                else if (x == 5)
+                                {
+                                    pictureBox5.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+                                else if (x == 6)
+                                {
+                                    pictureBox6.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+                                else if (x == 7)
+                                {
+                                    pictureBox7.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+                                else if (x == 8)
+                                {
+                                    pictureBox8.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
+                                }
+
                                 break;
                             case "99":
                                 pictureBox1.ImageLocation = @"C:\imgproj\";
@@ -699,7 +734,6 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE AVENTURA";
                     conexao.Open();
 
-                    String[] jogoav = new string[9];
 
                     if (Program.idnumberav >= 1)
                     {
@@ -828,8 +862,40 @@ namespace Projeto_Loja_Games
                                 }
                                 break;
 
-                            case "9":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
+                            case "Detroit":
+                                if (x == 1)
+                                {
+                                    pictureBox1.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+                                else if (x == 2)
+                                {
+                                    pictureBox2.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+                                else if (x == 3)
+                                {
+                                    pictureBox3.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+                                else if (x == 4)
+                                {
+                                    pictureBox4.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+                                else if (x == 5)
+                                {
+                                    pictureBox5.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+                                else if (x == 6)
+                                {
+                                    pictureBox6.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+                                else if (x == 7)
+                                {
+                                    pictureBox7.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+                                else if (x == 8)
+                                {
+                                    pictureBox8.ImageLocation = @"C:\imgproj\aventura\detroit.png";
+                                }
+
                                 break;
                             case "99":
                                 pictureBox1.ImageLocation = @"C:\imgproj\";
@@ -849,7 +915,6 @@ namespace Projeto_Loja_Games
                     label9.Text = "JOGOS DE TERROR";
                     conexao.Open();
 
-                    String[] jogotr = new string[9];
 
                     if (Program.idnumbertr >= 1)
                     {
@@ -1001,6 +1066,22 @@ namespace Projeto_Loja_Games
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            if(Program.lista == 1)
+            {
+                Program.jogo = jogoac[1];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[1];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[1];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[1];
+            }
             Projeto_Loja_Games.Program.jgesc = 1;
             this.Hide();
             var jg = new Jogo();
@@ -1009,6 +1090,22 @@ namespace Projeto_Loja_Games
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            if (Program.lista == 1)
+            {
+                Program.jogo = jogoac[2];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[2];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[2];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[2];
+            }
             Projeto_Loja_Games.Program.jgesc = 2;
             this.Hide();
             var jg = new Jogo();
@@ -1017,6 +1114,22 @@ namespace Projeto_Loja_Games
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            if (Program.lista == 1)
+            {
+                Program.jogo = jogoac[3];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[3];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[3];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[3];
+            }
             Projeto_Loja_Games.Program.jgesc = 3;
             this.Hide();
             var jg = new Jogo();
@@ -1025,6 +1138,22 @@ namespace Projeto_Loja_Games
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            if (Program.lista == 1)
+            {
+                Program.jogo = jogoac[4];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[4];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[4];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[4];
+            }
             Projeto_Loja_Games.Program.jgesc = 4;
             this.Hide();
             var jg = new Jogo();
@@ -1033,7 +1162,23 @@ namespace Projeto_Loja_Games
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.jgesc = 5;
+            if (Program.lista == 1)
+            {
+                Program.jogo = jogoac[8];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[8];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[8];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[8];
+            }
+            Projeto_Loja_Games.Program.jgesc = 8;
             this.Hide();
             var jg = new Jogo();
             jg.Show();
@@ -1041,7 +1186,23 @@ namespace Projeto_Loja_Games
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.jgesc = 6;
+            if (Program.lista == 1)
+            {
+                Program.jogo = jogoac[7];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[7];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[7];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[7];
+            }
+            Projeto_Loja_Games.Program.jgesc = 7;
             this.Hide();
             var jg = new Jogo();
             jg.Show();
@@ -1049,7 +1210,23 @@ namespace Projeto_Loja_Games
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.jgesc = 7;
+            if (Program.lista == 1)
+            {
+                Program.jogo = jogoac[6];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[6];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[6];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[6];
+            }
+            Projeto_Loja_Games.Program.jgesc = 6;
             this.Hide();
             var jg = new Jogo();
             jg.Show();
@@ -1057,7 +1234,23 @@ namespace Projeto_Loja_Games
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.jgesc = 8;
+            if (Program.lista == 1)
+            {
+                Program.jogo = jogoac[5];
+            }
+            else if (Program.lista == 2)
+            {
+                Program.jogo = jogorpg[5];
+            }
+            else if (Program.lista == 3)
+            {
+                Program.jogo = jogoav[5];
+            }
+            else if (Program.lista == 4)
+            {
+                Program.jogo = jogotr[5];
+            }
+            Projeto_Loja_Games.Program.jgesc = 5;
             this.Hide();
             var jg = new Jogo();
             jg.Show();
