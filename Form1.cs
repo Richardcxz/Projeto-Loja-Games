@@ -35,34 +35,22 @@ namespace Projeto_Loja_Games
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.lista = 1;
-            this.Hide();
-            var ac = new ListaJogos();
-            ac.Show();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.lista = 2;
-            this.Hide();
-            var rpg = new ListaJogos();
-            rpg.Show();
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.lista = 3;
-            this.Hide();
-            var av = new ListaJogos();
-            av.Show();
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Projeto_Loja_Games.Program.lista = 4;
-            this.Hide();
-            var ter = new ListaJogos();
-            ter.Show();
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -77,6 +65,45 @@ namespace Projeto_Loja_Games
             this.Hide();
             var cad = new Cadastro();
             cad.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            var mod = new dbadm();
+            mod.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 1;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 2;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 4;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 3;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
         }
     }
 }

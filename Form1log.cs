@@ -61,5 +61,37 @@ namespace Projeto_Loja_Games
             var mn = new Form1();
             mn.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 1;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 2;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 3;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Projeto_Loja_Games.Program.lista = 4;
+            this.Hide();
+            var ac = new ListaJogos();
+            ac.Show();
+        }
     }
 }

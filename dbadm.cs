@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Projeto_Loja_Games
 {
@@ -20,6 +21,7 @@ namespace Projeto_Loja_Games
         MySqlDataReader pegarlastid2;
         MySqlDataReader pegarlastid3;
         MySqlDataReader pegarlastid4;
+        OpenFileDialog open = new OpenFileDialog();
         public string sql;
         public int idcheck;
         public int sqlidi1;
@@ -39,6 +41,29 @@ namespace Projeto_Loja_Games
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var alt = new alteracoesadm();
+            alt.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
             if (checkBox1.Checked == true)
             {
                 idcheck = 1;
@@ -48,12 +73,16 @@ namespace Projeto_Loja_Games
                 idcheck = 0;
             }
 
-            if (textBox1.Text != "" && textBox2.Text != "") {
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
 
                 conexao10.Close();
 
-                switch (Projeto_Loja_Games.Program.dboption) {
+                switch (Projeto_Loja_Games.Program.dboption)
+                {
                     case 1:
+
+
 
                         if (idcheck == 0)
                         {
@@ -79,7 +108,25 @@ namespace Projeto_Loja_Games
                             conexao10.Open();
                             comando.ExecuteReader();
 
+                            MessageBox.Show("Insira a imagem do jogo.");
+
+                            OpenFileDialog open = new OpenFileDialog();
+                            open.Filter = "Image Files(*.jpg;)|*.jpg;";
+                            open.Multiselect = false;
+
+                            if (open.ShowDialog() == DialogResult.OK)
+                            {
+                                var pic = open.FileName;
+                                File.Copy(pic, Path.Combine(@"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\", Path.GetFileName(textBox1.Text + ".jpg")), true);
+                                MessageBox.Show("Imagem salva com sucesso!");
+                                int theid = Convert.ToInt32(textBox5.Text);
+                                Program.jgac[theid] = textBox1.Text;
+                            }
+
+
                             MessageBox.Show("Jogo de ação inserido com sucesso!");
+
+
 
                             conexao10.Close();
                             //---------------------------------------------------------
@@ -89,19 +136,23 @@ namespace Projeto_Loja_Games
                         {
                             MessageBox.Show("A tabela já possui 8 jogos da categoria!");
                         }
+
+
+
                         break;
 
                     case 2:
 
-                        if (idcheck == 0) {
-                        conexao10.Open();
+                        if (idcheck == 0)
+                        {
+                            conexao10.Open();
 
-                        string sqlid2 = "SELECT ID FROM cad_rpg where ID =(Select Max(ID) from cad_rpg);";
-                        MySqlCommand cmnd2 = new MySqlCommand(sqlid2, conexao10);
-                        pegarlastid2 = cmnd2.ExecuteReader();
-                        pegarlastid2.Read();
-                        string strlastid2 = pegarlastid2["ID"].ToString();
-                        sqlidi2 = Int32.Parse(strlastid2);
+                            string sqlid2 = "SELECT ID FROM cad_rpg where ID =(Select Max(ID) from cad_rpg);";
+                            MySqlCommand cmnd2 = new MySqlCommand(sqlid2, conexao10);
+                            pegarlastid2 = cmnd2.ExecuteReader();
+                            pegarlastid2.Read();
+                            string strlastid2 = pegarlastid2["ID"].ToString();
+                            sqlidi2 = Int32.Parse(strlastid2);
 
                             conexao10.Close();
                         }
@@ -115,6 +166,21 @@ namespace Projeto_Loja_Games
 
                             conexao10.Open();
                             comando.ExecuteReader();
+
+                            MessageBox.Show("Insira a imagem do jogo.");
+
+                            OpenFileDialog open = new OpenFileDialog();
+                            open.Filter = "Image Files(*.jpg;)|*.jpg;";
+                            open.Multiselect = false;
+
+                            if (open.ShowDialog() == DialogResult.OK)
+                            {
+                                var pic = open.FileName;
+                                File.Copy(pic, Path.Combine(@"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rp\", Path.GetFileName(textBox1.Text + ".jpg")), true);
+                                MessageBox.Show("Imagem salva com sucesso!");
+                                int theid = Convert.ToInt32(textBox5.Text);
+                                Program.jgrpg[theid] = textBox1.Text;
+                            }
 
                             MessageBox.Show("Jogo de rpg inserido com sucesso!");
 
@@ -152,6 +218,21 @@ namespace Projeto_Loja_Games
                             conexao10.Open();
                             comando.ExecuteReader();
 
+                            MessageBox.Show("Insira a imagem do jogo.");
+
+                            OpenFileDialog open = new OpenFileDialog();
+                            open.Filter = "Image Files(*.jpg;)|*.jpg;";
+                            open.Multiselect = false;
+
+                            if (open.ShowDialog() == DialogResult.OK)
+                            {
+                                var pic = open.FileName;
+                                File.Copy(pic, Path.Combine(@"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\", Path.GetFileName(textBox1.Text + ".jpg")), true);
+                                MessageBox.Show("Imagem salva com sucesso!");
+                                int theid = Convert.ToInt32(textBox5.Text);
+                                Program.jgav[theid] = textBox1.Text;
+                            }
+
                             MessageBox.Show("Jogo de aventura inserido com sucesso!");
 
                             conexao10.Close();
@@ -178,7 +259,8 @@ namespace Projeto_Loja_Games
                             conexao10.Close();
                         }
 
-                        if (sqlidi4 < 8) {
+                        if (sqlidi4 < 8)
+                        {
                             sql = "INSERT INTO cad_terror (id, nome_terror, descricao_terror, ano_terror, avaliacao_terror) " +
                                 "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "') ";
 
@@ -186,6 +268,22 @@ namespace Projeto_Loja_Games
 
                             conexao10.Open();
                             comando.ExecuteReader();
+
+                            MessageBox.Show("Insira a imagem do jogo.");
+
+                            OpenFileDialog open = new OpenFileDialog();
+                            open.Filter = "Image Files(*.jpg;)|*.jpg;";
+                            open.Multiselect = false;
+
+                            if (open.ShowDialog() == DialogResult.OK)
+                            {
+                                var pic = open.FileName;
+                                File.Copy(pic, Path.Combine(@"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\", Path.GetFileName(textBox1.Text + ".jpg")), true);
+                                MessageBox.Show("Imagem salva com sucesso!");
+                                int theid = Convert.ToInt32(textBox5.Text);
+                                Program.jgtr[theid] = textBox1.Text;
+                                MessageBox.Show("VALOR DE JGTR = " + Program.jgtr[theid]);
+                            }
 
                             MessageBox.Show("Jogo de terror inserido com sucesso!");
 
@@ -201,102 +299,96 @@ namespace Projeto_Loja_Games
             else
             {
                 MessageBox.Show("Algum dos campos está vazio!");
-        }
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            switch (Projeto_Loja_Games.Program.dboption) { 
-
-            case 1:
-            sql = "SELECT * FROM cad_acao";
-            da = new MySqlDataAdapter(sql,conexao10);
-            DT = new DataTable();
-            da.Fill(DT);
-            dataGridView1.DataSource = DT;
-
-                break;
-            case 2:
-            sql = "SELECT * FROM cad_rpg";
-            da = new MySqlDataAdapter(sql, conexao10);
-            DT = new DataTable();
-            da.Fill(DT);
-            dataGridView1.DataSource = DT;
-
-                break;
-            case 3:
-            sql = "SELECT * FROM cad_aventura";
-            da = new MySqlDataAdapter(sql, conexao10);
-            DT = new DataTable();
-            da.Fill(DT);
-            dataGridView1.DataSource = DT;
-
-                break;
-            case 4:
-            sql = "SELECT * FROM cad_terror";
-            da = new MySqlDataAdapter(sql, conexao10);
-            DT = new DataTable();
-            da.Fill(DT);
-            dataGridView1.DataSource = DT;
-
-                break;
             }
+
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             switch (Projeto_Loja_Games.Program.dboption)
             {
 
-            case 1:
-            sql = "DELETE FROM cad_acao WHERE nome_acao = @nomeac";
-            comando = new MySqlCommand(sql, conexao10);
-            comando.Parameters.AddWithValue("@nomeac", textBox1.Text);
-            conexao10.Open();
-            comando.ExecuteReader();
-            MessageBox.Show("Jogo de ação deletado com sucesso!");
-            conexao10.Close();
-            break;
+                case 1:
+                    sql = "DELETE FROM cad_acao WHERE nome_acao = @nomeac";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@nomeac", textBox1.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
+                    MessageBox.Show("Jogo de ação deletado com sucesso!");
+                    conexao10.Close();
+                    break;
 
-            case 2:
-            sql = "DELETE FROM cad_rpg WHERE nome_rpg = @nomerpg";
-            comando = new MySqlCommand(sql, conexao10);
-            comando.Parameters.AddWithValue("@nomerpg", textBox1.Text);
-            conexao10.Open();
-            comando.ExecuteReader();
-            MessageBox.Show("Jogo de rpg deletado com sucesso!");
-            conexao10.Close();
-            break;
+                case 2:
+                    sql = "DELETE FROM cad_rpg WHERE nome_rpg = @nomerpg";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@nomerpg", textBox1.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
+                    MessageBox.Show("Jogo de rpg deletado com sucesso!");
+                    conexao10.Close();
+                    break;
 
-            case 3:
-            sql = "DELETE FROM cad_aventura WHERE nome_aventura = @nomeaventura";
-            comando = new MySqlCommand(sql, conexao10);
-            comando.Parameters.AddWithValue("@nomeaventura", textBox1.Text);
-            conexao10.Open();
-            comando.ExecuteReader();
-            MessageBox.Show("Jogo de aventura deletado com sucesso!");
-            conexao10.Close();
-            break;
+                case 3:
+                    sql = "DELETE FROM cad_aventura WHERE nome_aventura = @nomeaventura";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@nomeaventura", textBox1.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
+                    MessageBox.Show("Jogo de aventura deletado com sucesso!");
+                    conexao10.Close();
+                    break;
 
-            case 4:
-            sql = "DELETE FROM cad_terror WHERE nome_terror = @nometerror";
-            comando = new MySqlCommand(sql, conexao10);
-            comando.Parameters.AddWithValue("@nometerror", textBox1.Text);
-            conexao10.Open();
-            comando.ExecuteReader();
-            MessageBox.Show("Jogo de terror deletado com sucesso!");
-            conexao10.Close();
-            break;
+                case 4:
+                    sql = "DELETE FROM cad_terror WHERE nome_terror = @nometerror";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@nometerror", textBox1.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
+                    MessageBox.Show("Jogo de terror deletado com sucesso!");
+                    conexao10.Close();
+                    break;
 
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var alt = new alteracoesadm();
-            alt.Show();
+            switch (Projeto_Loja_Games.Program.dboption)
+            {
+
+                case 1:
+                    sql = "SELECT * FROM cad_acao";
+                    da = new MySqlDataAdapter(sql, conexao10);
+                    DT = new DataTable();
+                    da.Fill(DT);
+                    dataGridView1.DataSource = DT;
+
+                    break;
+                case 2:
+                    sql = "SELECT * FROM cad_rpg";
+                    da = new MySqlDataAdapter(sql, conexao10);
+                    DT = new DataTable();
+                    da.Fill(DT);
+                    dataGridView1.DataSource = DT;
+
+                    break;
+                case 3:
+                    sql = "SELECT * FROM cad_aventura";
+                    da = new MySqlDataAdapter(sql, conexao10);
+                    DT = new DataTable();
+                    da.Fill(DT);
+                    dataGridView1.DataSource = DT;
+
+                    break;
+                case 4:
+                    sql = "SELECT * FROM cad_terror";
+                    da = new MySqlDataAdapter(sql, conexao10);
+                    DT = new DataTable();
+                    da.Fill(DT);
+                    dataGridView1.DataSource = DT;
+
+                    break;
+            }
         }
     }
 }

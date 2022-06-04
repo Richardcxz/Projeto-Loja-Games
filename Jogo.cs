@@ -43,6 +43,96 @@ namespace Projeto_Loja_Games
 
             if (Program.lista == 1)
             {
+                string sqlid1 = "SELECT ID FROM cad_acao where ID =(Select Max(ID) from cad_acao);";
+                MySqlCommand cmnd1 = new MySqlCommand(sqlid1, conexao);
+                pegarlastid = cmnd1.ExecuteReader();
+                pegarlastid.Read();
+                string strlastid1 = pegarlastid["ID"].ToString();
+                sqlidi1 = Int32.Parse(strlastid1);
+                Program.idnumberac = sqlidi1;
+                pegarlastid.Close();
+            }
+
+            if (Program.lista == 2)
+            {
+                string sqlid2 = "SELECT ID FROM cad_rpg where ID =(Select Max(ID) from cad_rpg);";
+                MySqlCommand cmnd2 = new MySqlCommand(sqlid2, conexao);
+                pegarlastid = cmnd2.ExecuteReader();
+                pegarlastid.Read();
+                string strlastid2 = pegarlastid["ID"].ToString();
+                sqlidi2 = Int32.Parse(strlastid2);
+                Program.idnumberrpg = sqlidi2;
+                pegarlastid.Close();
+            }
+
+            if (Program.lista == 3)
+            {
+                string sqlid3 = "SELECT ID FROM cad_aventura where ID =(Select Max(ID) from cad_aventura);";
+                MySqlCommand cmnd3 = new MySqlCommand(sqlid3, conexao);
+                pegarlastid = cmnd3.ExecuteReader();
+                pegarlastid.Read();
+                string strlastid3 = pegarlastid["ID"].ToString();
+                sqlidi3 = Int32.Parse(strlastid3);
+                Program.idnumberav = sqlidi3;
+                pegarlastid.Close();
+            }
+
+            if (Program.lista == 4)
+            {
+                string sqlid4 = "SELECT ID FROM cad_terror where ID =(Select Max(ID) from cad_terror);";
+                MySqlCommand cmnd4 = new MySqlCommand(sqlid4, conexao);
+                pegarlastid = cmnd4.ExecuteReader();
+                pegarlastid.Read();
+                string strlastid4 = pegarlastid["ID"].ToString();
+                sqlidi4 = Int32.Parse(strlastid4);
+                Program.idnumbertr = sqlidi4;
+                pegarlastid.Close();
+            }
+
+
+            if (Program.lista == 1)
+            {
+
+                {
+                    for (int x = 1; x <= sqlidi1; x++)
+                    {
+                        if (Program.jgesc == 1)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 2)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 3)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 4)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 5)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 6)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 7)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 8)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+
+                    }
+                }
+
+
                 sql = "SELECT nome_acao FROM cad_acao WHERE id = "+Program.jgesc+";";
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
@@ -78,6 +168,43 @@ namespace Projeto_Loja_Games
 
             if (Program.lista == 2)
             {
+
+                    for (int x = 1; x <= sqlidi2; x++)
+                    {
+                        if (Program.jgesc == 1)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 2)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 3)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 4)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 5)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 6)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 7)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 8)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                }
+
                 sql = "SELECT nome_rpg FROM cad_rpg WHERE id = " + Program.jgesc + ";";
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
@@ -113,6 +240,44 @@ namespace Projeto_Loja_Games
 
             if (Program.lista == 3)
             {
+                
+                for (int x = 1; x <= sqlidi3; x++)
+                    {
+                        if (Program.jgesc == 1)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 2)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 3)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 4)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 5)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 6)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 7)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 8)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+
+                    }
+
                 sql = "SELECT nome_aventura FROM cad_aventura WHERE id = " + Program.jgesc + ";";
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
@@ -148,6 +313,44 @@ namespace Projeto_Loja_Games
 
             if (Program.lista == 4)
             {
+
+                for (int x = 1; x <= sqlidi4; x++)
+                    {
+                        if (Program.jgesc == 1)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 2)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 3)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 4)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 5)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 6)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 7)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (Program.jgesc == 8)
+                        {
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+
+                    }
+
                 sql = "SELECT nome_terror FROM cad_terror WHERE id = " + Program.jgesc + ";";
                 cmnd = new MySqlCommand(sql, conexao);
                 pegarnome = cmnd.ExecuteReader();
@@ -179,187 +382,6 @@ namespace Projeto_Loja_Games
                 jogotr1 = pegarnome["descricao_terror"].ToString();
                 label4.Text = jogotr1;
                 pegarnome.Close();
-            }
-
-            if (Program.lista == 1)
-            {
-                switch (jogoac1n)
-                {
-                    case "":
-                        break;
-                    case "2":
-                        break;
-                    case "3":
-                        break;
-                    case "4":
-                        break;
-                    case "5":
-                        break;
-                    case "6":
-                        break;
-                    case "7":
-                        break;
-                    case "8":
-                        break;
-                    case "9":
-                        break;
-                    case "10":
-                        break;
-                    case "11":
-                        break;
-                    case "12":
-                        break;
-                    case "13":
-                        break;
-                    case "14":
-                        break;
-                    case "15":
-                        break;
-                    case "16":
-                        break;
-                    case "17":
-                        break;
-                    case "18":
-                        break;
-                    case "19":
-                        break;
-                }
-            }
-
-            else if (Program.lista == 2)
-            {
-                switch (jogorpg1n)
-                {
-                    case "":
-                        break;
-                    case "2":
-                        break;
-                    case "3":
-                        break;
-                    case "4":
-                        break;
-                    case "5":
-                        break;
-                    case "6":
-                        break;
-                    case "7":
-                        break;
-                    case "8":
-                        break;
-                    case "9":
-                        break;
-                    case "10":
-                        break;
-                    case "11":
-                        break;
-                    case "12":
-                        break;
-                    case "13":
-                        break;
-                    case "14":
-                        break;
-                    case "15":
-                        break;
-                    case "16":
-                        break;
-                    case "17":
-                        break;
-                    case "18":
-                        break;
-                    case "19":
-                        break;
-                }
-            }
-
-            else if (Program.lista == 3)
-            {
-                switch (jogoav1n)
-                {
-                    case "Detroit":
-                        pictureBox1.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                        break;
-                    case "2":
-                        break;
-                    case "3":
-                        break;
-                    case "4":
-                        break;
-                    case "5":
-                        break;
-                    case "6":
-                        break;
-                    case "7":
-                        break;
-                    case "8":
-                        break;
-                    case "9":
-                        break;
-                    case "10":
-                        break;
-                    case "11":
-                        break;
-                    case "12":
-                        break;
-                    case "13":
-                        break;
-                    case "14":
-                        break;
-                    case "15":
-                        break;
-                    case "16":
-                        break;
-                    case "17":
-                        break;
-                    case "18":
-                        break;
-                    case "19":
-                        break;
-                }
-            }
-
-            else if (Program.lista == 4)
-            {
-                switch (jogotr1n)
-                {
-                    case "":
-                        break;
-                    case "2":
-                        break;
-                    case "3":
-                        break;
-                    case "4":
-                        break;
-                    case "5":
-                        break;
-                    case "6":
-                        break;
-                    case "7":
-                        break;
-                    case "8":
-                        break;
-                    case "9":
-                        break;
-                    case "10":
-                        break;
-                    case "11":
-                        break;
-                    case "12":
-                        break;
-                    case "13":
-                        break;
-                    case "14":
-                        break;
-                    case "15":
-                        break;
-                    case "16":
-                        break;
-                    case "17":
-                        break;
-                    case "18":
-                        break;
-                    case "19":
-                        break;
-                }
             }
 
             conexao.Close();

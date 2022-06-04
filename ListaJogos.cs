@@ -496,54 +496,39 @@ namespace Projeto_Loja_Games
 
                     for (int x = 1; x <= sqlidi1; x++)
                     {
-                        switch (jogoac[x])
+                        if(x == 1)
                         {
-                            default:
-                                if (x == 1)
-                                {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 2)
-                                {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 3)
-                                {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 4)
-                                {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 5)
-                                {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 6)
-                                {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 7)
-                                {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 8)
-                                {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                break;
-
-                            case "9":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-                            case "99":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-                            case "999":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] +".jpg";
                         }
+                        else if (x == 2)
+                        {
+                            pictureBox2.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (x == 3)
+                        {
+                            pictureBox3.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (x == 4)
+                        {
+                            pictureBox4.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (x == 5)
+                        {
+                            pictureBox5.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (x == 6)
+                        {
+                            pictureBox6.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (x == 7)
+                        {
+                            pictureBox7.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+                        else if (x == 8)
+                        {
+                            pictureBox8.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
+                        }
+
                     }
 
                     conexao.Close();
@@ -644,87 +629,39 @@ namespace Projeto_Loja_Games
 
                     for (int x = 1; x <= sqlidi2; x++)
                     {
-                        switch (jogorpg[x])
+                        if (x == 1)
                         {
-                            default:
-                                if (x == 1)
-                                {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 2)
-                                {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 3)
-                                {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 4)
-                                {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 5)
-                                {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 6)
-                                {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 7)
-                                {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 8)
-                                {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                break;
-
-                            case "Elden Ring":
-
-                                if (x == 1)
-                                {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-                                else if (x == 2)
-                                {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-                                else if (x == 3)
-                                {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-                                else if (x == 4)
-                                {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-                                else if (x == 5)
-                                {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-                                else if (x == 6)
-                                {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-                                else if (x == 7)
-                                {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-                                else if (x == 8)
-                                {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\rpg\eldenring.jpg";
-                                }
-
-                                break;
-                            case "99":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-                            case "999":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
                         }
+                        else if (x == 2)
+                        {
+                            pictureBox2.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (x == 3)
+                        {
+                            pictureBox3.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (x == 4)
+                        {
+                            pictureBox4.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (x == 5)
+                        {
+                            pictureBox5.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (x == 6)
+                        {
+                            pictureBox6.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (x == 7)
+                        {
+                            pictureBox7.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+                        else if (x == 8)
+                        {
+                            pictureBox8.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
+                        }
+
                     }
 
                     conexao.Close();
@@ -825,86 +762,39 @@ namespace Projeto_Loja_Games
 
                     for (int x = 1; x <= sqlidi3; x++)
                     {
-                        switch (jogoav[x])
+                        if (x == 1)
                         {
-                            default:
-                                if (x == 1)
-                                {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 2)
-                                {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 3)
-                                {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 4)
-                                {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 5)
-                                {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 6)
-                                {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 7)
-                                {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 8)
-                                {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                break;
-
-                            case "Detroit":
-                                if (x == 1)
-                                {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-                                else if (x == 2)
-                                {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-                                else if (x == 3)
-                                {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-                                else if (x == 4)
-                                {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-                                else if (x == 5)
-                                {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-                                else if (x == 6)
-                                {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-                                else if (x == 7)
-                                {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-                                else if (x == 8)
-                                {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\aventura\detroit.png";
-                                }
-
-                                break;
-                            case "99":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-                            case "999":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
                         }
+                        else if (x == 2)
+                        {
+                            pictureBox2.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (x == 3)
+                        {
+                            pictureBox3.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (x == 4)
+                        {
+                            pictureBox4.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (x == 5)
+                        {
+                            pictureBox5.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (x == 6)
+                        {
+                            pictureBox6.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (x == 7)
+                        {
+                            pictureBox7.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+                        else if (x == 8)
+                        {
+                            pictureBox8.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
+                        }
+
                     }
 
                     conexao.Close();
@@ -1006,54 +896,39 @@ namespace Projeto_Loja_Games
 
                     for (int x = 1; x <= sqlidi4; x++)
                     {
-                        switch (jogotr[x])
+                        if (x == 1)
                         {
-                            default:
-                                if (x == 1)
-                                {
-                                    pictureBox1.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 2)
-                                {
-                                    pictureBox2.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 3)
-                                {
-                                    pictureBox3.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 4)
-                                {
-                                    pictureBox4.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 5)
-                                {
-                                    pictureBox5.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 6)
-                                {
-                                    pictureBox6.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 7)
-                                {
-                                    pictureBox7.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                else if (x == 8)
-                                {
-                                    pictureBox8.ImageLocation = @"C:\imgproj\placeholder.jpg";
-                                }
-                                break;
-
-                            case "9":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-                            case "99":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-                            case "999":
-                                pictureBox1.ImageLocation = @"C:\imgproj\";
-                                break;
-
+                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
                         }
+                        else if (x == 2)
+                        {
+                            pictureBox2.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (x == 3)
+                        {
+                            pictureBox3.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (x == 4)
+                        {
+                            pictureBox4.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (x == 5)
+                        {
+                            pictureBox5.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (x == 6)
+                        {
+                            pictureBox6.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (x == 7)
+                        {
+                            pictureBox7.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+                        else if (x == 8)
+                        {
+                            pictureBox8.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
+                        }
+
                     }
 
                     conexao.Close();

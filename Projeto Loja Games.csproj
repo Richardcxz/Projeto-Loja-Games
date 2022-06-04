@@ -268,5 +268,23 @@
   <ItemGroup>
     <None Include="Resources\action1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\ac\" />
+    <Folder Include="Images\av\" />
+    <Folder Include="Images\rp\" />
+    <Folder Include="Images\tr\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundblack31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,6 +23,10 @@ namespace Projeto_Loja_Games
         public static int formapag = 0;
         public static int buy = 0;
         public static string jogo;
+        public static String[] jgac = new string[9];
+        public static String[] jgrpg = new string[9];
+        public static String[] jgav = new string[9];
+        public static String[] jgtr = new string[9];
 
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
