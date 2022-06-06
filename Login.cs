@@ -92,14 +92,27 @@ namespace Projeto_Loja_Games
 
                 if (reader.Read())
                 {
-                    reader.Close();
-                    conexao.Close();
+                    
                     Projeto_Loja_Games.Program.islogged = 1;
                     Projeto_Loja_Games.Program.buy = 1;
                     MessageBox.Show("Login Realizado.");
                     this.Hide();
                     var menulog = new Form1log();
                     menulog.Show();
+                    reader.Close();
+
+                    sql = $"SELECT id FROM cad_cliente WHERE nome='{textBox1.Text}' AND senha='{textBox2.Text}';";
+
+                    cmnd = new MySqlCommand(sql, conexao);
+
+                    reader = cmnd.ExecuteReader();
+                    reader.Read();
+                    string logid = reader["id"].ToString();
+                    Program.iduser = Int32.Parse(logid);
+
+                    conexao.Close();
+                    reader.Close();
+
                 }
                 else
                 {

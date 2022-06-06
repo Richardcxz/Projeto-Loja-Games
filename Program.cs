@@ -28,6 +28,8 @@ namespace Projeto_Loja_Games
         public static String[] jgav = new string[9];
         public static String[] jgtr = new string[9];
 
+        //atribuir as imagens para as strings aqui.
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

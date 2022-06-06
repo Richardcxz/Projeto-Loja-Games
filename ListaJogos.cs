@@ -399,8 +399,6 @@ namespace Projeto_Loja_Games
 
             switch (Projeto_Loja_Games.Program.lista)
             {
-                //colocar ifs dependendo do nome do jogo, para puxar da pasta as imagens correspondentes
-                //e caso não tenha o jogo na base de imagens, deixar uma foto padrão para os que não têm
                 case 1:
                     label9.Text = "JOGOS DE AÇÃO";
                     conexao.Open();
