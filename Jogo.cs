@@ -94,42 +94,6 @@ namespace Projeto_Loja_Games
             {
 
                 {
-                    for (int x = 1; x <= sqlidi1; x++)
-                    {
-                        if (Program.jgesc == 1)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 2)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 3)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 4)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 5)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 6)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 7)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 8)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\ac\" + Program.jgac[x] + ".jpg";
-                        }
-
-                    }
                 }
 
 
@@ -169,41 +133,6 @@ namespace Projeto_Loja_Games
             if (Program.lista == 2)
             {
 
-                    for (int x = 1; x <= sqlidi2; x++)
-                    {
-                        if (Program.jgesc == 1)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 2)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 3)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 4)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 5)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 6)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 7)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 8)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\rpg\" + Program.jgrpg[x] + ".jpg";
-                        }
-                }
 
                 sql = "SELECT nome_rpg FROM cad_rpg WHERE id = " + Program.jgesc + ";";
                 cmnd = new MySqlCommand(sql, conexao);
@@ -240,43 +169,7 @@ namespace Projeto_Loja_Games
 
             if (Program.lista == 3)
             {
-                
-                for (int x = 1; x <= sqlidi3; x++)
-                    {
-                        if (Program.jgesc == 1)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 2)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 3)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 4)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 5)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 6)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 7)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 8)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\av\" + Program.jgav[x] + ".jpg";
-                        }
-
-                    }
+             
 
                 sql = "SELECT nome_aventura FROM cad_aventura WHERE id = " + Program.jgesc + ";";
                 cmnd = new MySqlCommand(sql, conexao);
@@ -313,43 +206,6 @@ namespace Projeto_Loja_Games
 
             if (Program.lista == 4)
             {
-
-                for (int x = 1; x <= sqlidi4; x++)
-                    {
-                        if (Program.jgesc == 1)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 2)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 3)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 4)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 5)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 6)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 7)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-                        else if (Program.jgesc == 8)
-                        {
-                            pictureBox1.ImageLocation = @"C:\Users\Richard\source\repos\Projeto-Loja-Games\Images\tr\" + Program.jgtr[x] + ".jpg";
-                        }
-
-                    }
 
                 sql = "SELECT nome_terror FROM cad_terror WHERE id = " + Program.jgesc + ";";
                 cmnd = new MySqlCommand(sql, conexao);

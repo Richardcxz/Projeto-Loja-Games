@@ -17,12 +17,20 @@ namespace Projeto_Loja_Games
         MySqlConnection conexao10;
         MySqlDataAdapter da;
         MySqlCommand comando;
+        MySqlCommand comando1;
+        MySqlCommand comando2;
+        MySqlCommand comando3;
+        MySqlCommand comando4;
         MySqlDataReader pegarlastid;
         MySqlDataReader pegarlastid2;
         MySqlDataReader pegarlastid3;
         MySqlDataReader pegarlastid4;
         OpenFileDialog open = new OpenFileDialog();
         public string sql;
+        public string sql1;
+        public string sql2;
+        public string sql3;
+        public string sql4;
         public int idcheck;
         public int sqlidi1;
         public int sqlidi2;
@@ -122,7 +130,14 @@ namespace Projeto_Loja_Games
                                 int theid = Convert.ToInt32(textBox5.Text);
                                 Program.jgac[theid] = textBox1.Text;
                             }
+                            conexao10.Close();
+                            conexao10.Open();
 
+                            sql1 = "INSERT INTO img_acao (id, save_acao) " +
+                                "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "') ";
+
+                                comando1 = new MySqlCommand(sql1, conexao10);
+                                comando1.ExecuteReader();
 
                             MessageBox.Show("Jogo de ação inserido com sucesso!");
 
@@ -181,6 +196,14 @@ namespace Projeto_Loja_Games
                                 int theid = Convert.ToInt32(textBox5.Text);
                                 Program.jgrpg[theid] = textBox1.Text;
                             }
+                            conexao10.Close();
+                            conexao10.Open();
+
+                            sql2 = "INSERT INTO img_rpg (id, save_rpg) " +
+                                "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "') ";
+
+                            comando2 = new MySqlCommand(sql2, conexao10);
+                            comando2.ExecuteReader();
 
                             MessageBox.Show("Jogo de rpg inserido com sucesso!");
 
@@ -232,6 +255,14 @@ namespace Projeto_Loja_Games
                                 int theid = Convert.ToInt32(textBox5.Text);
                                 Program.jgav[theid] = textBox1.Text;
                             }
+                            conexao10.Close();
+                            conexao10.Open();
+
+                            sql3 = "INSERT INTO img_aventura (id, save_aventura) " +
+                                "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "') ";
+
+                            comando3 = new MySqlCommand(sql3, conexao10);
+                            comando3.ExecuteReader();
 
                             MessageBox.Show("Jogo de aventura inserido com sucesso!");
 
@@ -284,6 +315,14 @@ namespace Projeto_Loja_Games
                                 Program.jgtr[theid] = textBox1.Text;
                                 MessageBox.Show("VALOR DE JGTR = " + Program.jgtr[theid]);
                             }
+                            conexao10.Close();
+                            conexao10.Open();
+
+                            sql4 = "INSERT INTO img_terror (id, save_terror) " +
+                                "VALUES ('" + textBox5.Text + "','" + textBox1.Text + "') ";
+
+                            comando4 = new MySqlCommand(sql4, conexao10);
+                            comando4.ExecuteReader();
 
                             MessageBox.Show("Jogo de terror inserido com sucesso!");
 
@@ -309,42 +348,70 @@ namespace Projeto_Loja_Games
             {
 
                 case 1:
-                    sql = "DELETE FROM cad_acao WHERE nome_acao = @nomeac";
+                    sql = "DELETE FROM cad_acao WHERE id = @id";
                     comando = new MySqlCommand(sql, conexao10);
-                    comando.Parameters.AddWithValue("@nomeac", textBox1.Text);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
                     conexao10.Open();
                     comando.ExecuteReader();
                     MessageBox.Show("Jogo de ação deletado com sucesso!");
                     conexao10.Close();
+
+                    sql = "DELETE FROM img_acao WHERE id = @id";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
+                    conexao10.Close();
                     break;
 
                 case 2:
-                    sql = "DELETE FROM cad_rpg WHERE nome_rpg = @nomerpg";
+                    sql = "DELETE FROM cad_rpg WHERE id = @id";
                     comando = new MySqlCommand(sql, conexao10);
-                    comando.Parameters.AddWithValue("@nomerpg", textBox1.Text);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
                     conexao10.Open();
                     comando.ExecuteReader();
                     MessageBox.Show("Jogo de rpg deletado com sucesso!");
                     conexao10.Close();
+
+                    sql = "DELETE FROM img_rpg WHERE id = @id";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
+                    conexao10.Close();
                     break;
 
                 case 3:
-                    sql = "DELETE FROM cad_aventura WHERE nome_aventura = @nomeaventura";
+                    sql = "DELETE FROM cad_aventura WHERE id = @id";
                     comando = new MySqlCommand(sql, conexao10);
-                    comando.Parameters.AddWithValue("@nomeaventura", textBox1.Text);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
                     conexao10.Open();
                     comando.ExecuteReader();
                     MessageBox.Show("Jogo de aventura deletado com sucesso!");
                     conexao10.Close();
+
+                    sql = "DELETE FROM img_aventura WHERE id = @id";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
+                    conexao10.Close();
                     break;
 
                 case 4:
-                    sql = "DELETE FROM cad_terror WHERE nome_terror = @nometerror";
+                    sql = "DELETE FROM cad_terror WHERE id = @id";
                     comando = new MySqlCommand(sql, conexao10);
-                    comando.Parameters.AddWithValue("@nometerror", textBox1.Text);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
                     conexao10.Open();
                     comando.ExecuteReader();
                     MessageBox.Show("Jogo de terror deletado com sucesso!");
+                    conexao10.Close();
+
+                    sql = "DELETE FROM img_terror WHERE id = @id";
+                    comando = new MySqlCommand(sql, conexao10);
+                    comando.Parameters.AddWithValue("@id", textBox5.Text);
+                    conexao10.Open();
+                    comando.ExecuteReader();
                     conexao10.Close();
                     break;
 

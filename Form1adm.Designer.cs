@@ -46,7 +46,7 @@ namespace Projeto_Loja_Games
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 34F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(119, 9);
+            this.label1.Location = new System.Drawing.Point(110, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(357, 62);
@@ -57,7 +57,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::Projeto_Loja_Games.Properties.Resources.image;
-            this.pictureBox6.Location = new System.Drawing.Point(47, 15);
+            this.pictureBox6.Location = new System.Drawing.Point(490, 15);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(43, 44);
@@ -70,7 +70,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Projeto_Loja_Games.Properties.Resources.logout;
-            this.pictureBox5.Location = new System.Drawing.Point(510, 15);
+            this.pictureBox5.Location = new System.Drawing.Point(546, 15);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(43, 44);
@@ -99,7 +99,7 @@ namespace Projeto_Loja_Games
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Light", 32F);
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(328, 121);
+            this.label7.Location = new System.Drawing.Point(321, 120);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(227, 59);

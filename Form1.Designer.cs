@@ -80,7 +80,7 @@ namespace Projeto_Loja_Games
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::Projeto_Loja_Games.Properties.Resources.register;
-            this.pictureBox6.Location = new System.Drawing.Point(538, 19);
+            this.pictureBox6.Location = new System.Drawing.Point(547, 19);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(42, 41);

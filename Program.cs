@@ -28,6 +28,7 @@ namespace Projeto_Loja_Games
         public static String[] jgav = new string[9];
         public static String[] jgtr = new string[9];
 
+
         //atribuir as imagens para as strings aqui.
 
         /// <summary>
@@ -39,6 +40,7 @@ namespace Projeto_Loja_Games
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
         }
     }
 }

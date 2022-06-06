@@ -96,9 +96,7 @@ namespace Projeto_Loja_Games
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            var conta = new Conta();
-            conta.Show();
+            
         }
     }
 }

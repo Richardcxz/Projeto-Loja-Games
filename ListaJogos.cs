@@ -49,6 +49,16 @@ namespace Projeto_Loja_Games
             sqlidi1 = Int32.Parse(strlastid1);
             Program.idnumberac = sqlidi1;
             pegarlastid.Close();
+
+                for (int x = 1; x <= sqlidi1; x++)
+                {
+                    string sqlload = "SELECT save_acao FROM img_acao WHERE id = " + x + ";";
+                    MySqlCommand cmnd5 = new MySqlCommand(sqlload, conexao);
+                    pegarlastid = cmnd5.ExecuteReader();
+                    pegarlastid.Read();
+                    Program.jgac[x] = pegarlastid["save_acao"].ToString();
+                    pegarlastid.Close();
+                }
             }
 
             if (Program.lista == 2)
@@ -61,6 +71,17 @@ namespace Projeto_Loja_Games
                 sqlidi2 = Int32.Parse(strlastid2);
                 Program.idnumberrpg = sqlidi2;
                 pegarlastid.Close();
+                
+                for (int x = 1; x <= sqlidi2; x++)
+                {
+                    string sqlload = "SELECT save_rpg FROM img_rpg WHERE id = " + x + ";";
+                    MySqlCommand cmnd6 = new MySqlCommand(sqlload, conexao);
+                    pegarlastid = cmnd6.ExecuteReader();
+                    pegarlastid.Read();
+                    Program.jgrpg[x] = pegarlastid["save_rpg"].ToString();
+                    pegarlastid.Close();
+                }
+
             }
 
             if (Program.lista == 3)
@@ -73,6 +94,16 @@ namespace Projeto_Loja_Games
                 sqlidi3 = Int32.Parse(strlastid3);
                 Program.idnumberav = sqlidi3;
                 pegarlastid.Close();
+
+                for (int x = 1; x <= sqlidi3; x++)
+                {
+                    string sqlload = "SELECT save_aventura FROM img_aventura WHERE id = " + x + ";";
+                    MySqlCommand cmnd7 = new MySqlCommand(sqlload, conexao);
+                    pegarlastid = cmnd7.ExecuteReader();
+                    pegarlastid.Read();
+                    Program.jgav[x] = pegarlastid["save_aventura"].ToString();
+                    pegarlastid.Close();
+                }
             }
 
             if (Program.lista == 4)
@@ -85,7 +116,18 @@ namespace Projeto_Loja_Games
                 sqlidi4 = Int32.Parse(strlastid4);
                 Program.idnumbertr = sqlidi4;
                 pegarlastid.Close();
+
+                for (int x = 1; x <= sqlidi4; x++)
+                {
+                    string sqlload = "SELECT save_terror FROM img_terror WHERE id = " + x + ";";
+                    MySqlCommand cmnd8 = new MySqlCommand(sqlload, conexao);
+                    pegarlastid = cmnd8.ExecuteReader();
+                    pegarlastid.Read();
+                    Program.jgtr[x] = pegarlastid["save_terror"].ToString();
+                    pegarlastid.Close();
+                }
             }
+
 
             if (Program.lista == 1)
             {
