@@ -98,5 +98,12 @@ namespace Projeto_Loja_Games
         {
             
         }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            var cnt = new Perfil();
+            cnt.Show();
+        }
     }
 }

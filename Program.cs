@@ -22,6 +22,7 @@ namespace Projeto_Loja_Games
         public static int idnumbertr = 0;
         public static int formapag = 0;
         public static int buy = 0;
+        public static string jogocomprado;
         public static string jogo;
         public static String[] jgac = new string[9];
         public static String[] jgrpg = new string[9];
