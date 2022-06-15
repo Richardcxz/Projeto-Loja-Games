@@ -130,6 +130,11 @@ namespace Projeto_Loja_Games
                                 int theid = Convert.ToInt32(textBox5.Text);
                                 Program.jgac[theid] = textBox1.Text;
                             }
+                            else
+                            {
+                                int theid = Convert.ToInt32(textBox5.Text);
+                                Program.jgac[theid] = "placeholder";
+                            }
                             conexao10.Close();
                             conexao10.Open();
 
